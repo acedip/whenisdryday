@@ -3,6 +3,9 @@
 import sqlite3
 from bottle import route, run, debug, template, request
 
+con = sqlite3.connect('sample.db')
+c = con.cursor()
+
 @route('/new', method='GET')
 def new_info():
 	if request.GET.get('save','').strip():
@@ -12,8 +15,6 @@ def new_info():
 		new_email = request.GET.get('email').strip()
 		new_state = request.GET.get('state').strip()
 	
-		con = sqlite3.connect('sample.db')
-		c = con.cursor()
 		c.execute("insert into userdb1 (first_name,last_name,email,state) values (?,?,?,?)",(new_first_name, new_last_name, new_email, new_state))
 		con.commit()
 		c.close()
@@ -21,6 +22,14 @@ def new_info():
 	else:
 		return template('new_user.tpl')
 
+@route('/list')
+def todo_list():
+	con = sqlite3.connect('sample.db')
+	c = con.cursor()
+	c.execute("select * from userdb1")
+	result = c.fetchall()
+	c.close()
+	return template('make_table',rows=result)
 
 debug(True) #not in production. same for reloader=True
 
