@@ -25,6 +25,8 @@ def new_info():
 	
 		con = sqlite3.connect('sample.db')
 		c = con.cursor()
+#		Table schema
+#		CREATE TABLE dryday (drydate integer, state char(30) , primary key(drydate,state) )
 		c.execute("insert into dryday (drydate,state) values (?,?)",(new_drydate, new_state))
 		con.commit()
 		c.close()

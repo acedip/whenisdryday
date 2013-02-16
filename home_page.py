@@ -27,7 +27,8 @@ def new_info():
 		new_last_name = request.GET.get('last_name').strip()
 		new_email = request.GET.get('email').strip()
 		new_state = request.GET.get('state').strip()
-	
+#		Table schema
+#		CREATE TABLE userdb1 (first_name char(30), last_name char(30) ,email varchar(50) primary key ,state char(30) not null)
 		c.execute("insert into userdb1 (first_name,last_name,email,state) values (?,?,?,?)",(new_first_name, new_last_name, new_email, new_state))
 		con.commit()
 		c.close()
