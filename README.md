@@ -1,7 +1,7 @@
 whenisdryday
 ============
-whenisdryday.in is a email subscription based service to inform users 
-when is a dry day in India.
+whenisdryday.in is an email subscription based web service to inform users 
+about dry day in India.
 Copyright (C) 2013  Anirudh singh shekhawat shekhawat.anirudh@gmail.com
 
 This program is free software: you can redistribute it and/or modify
