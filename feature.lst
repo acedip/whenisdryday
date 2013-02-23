@@ -16,12 +16,13 @@
 
 == All Pages and their Relation ==
 # home page
-# about
 -> git code
+# about us (static page)
 +about the webiste
 +about the people
-# list of dry days
-# wet days - a fun, fair and parafilia on dry days. a pun intended on dry days.
+# list of dry days - dynamic
+-> update state
+# wet days (static page) - a fun, fair and parafilia on dry days. a pun intended on dry days.
 + with videos, fun link, pictures etc. the state graphic art.
 #email -> ## update state 
 #email -> ## unsubscribe
@@ -42,4 +43,7 @@ a drop down to choose state and js renders that page.
 @exception handling for web socket fails.
 @exception handling for 500
 +concurrent db read/writes to avoid 500 in db lock case.why would it arise. it arose once in test.
+-># wet days
++ two versions of wet days. a new signed up user coming here with a success message with preferably his first name.
++ and a second fixed version accessible from home page.
 
