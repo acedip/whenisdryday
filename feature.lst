@@ -39,4 +39,7 @@ do want to direct user to a new page. or we could to the "wet days" page with a 
 + enter dry days and get a list of all dry days
 +@ a one time call to db when page loads, pass all state and dry days to js. \
 a drop down to choose state and js renders that page.
+@exception handling for web socket fails.
+@exception handling for 500
++concurrent db read/writes to avoid 500 in db lock case.why would it arise. it arose once in test.
 
