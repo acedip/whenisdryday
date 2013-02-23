@@ -1,0 +1,41 @@
++--------------+------------------------------------------------------------------------+
+| Feature List | Add features, page flows, links and path deviations on page and process|
++--------------+------------------------------------------------------------------------+
+=========================================================================================
+== Annotations to be used to describe feature. == 
+=================================================
+# - Web page name, parent page.
+## - child page, which could only be accessed/reached via parent page. and hence forth.
+@ - Backend parent feature.
+@@ - Child feature.
++ - A feature/action on the page or process. This marks a new feature/process.
+/ - line continuation.
+-> - link on a page leading to another page/or back end relatiing two or processes
+= - For comments, marking headers etc
+=========================================================================================
+
+== All Pages and their Relation ==
+# home page
+# about
+-> git code
++about the webiste
++about the people
+# list of dry days
+# wet days - a fun, fair and parafilia on dry days. a pun intended on dry days.
++ with videos, fun link, pictures etc. the state graphic art.
+#email -> ## update state 
+#email -> ## unsubscribe
+==
+
+# Home page
+@ when gujarat entered = needs more thinking.
++ js to pass state value entered and if it matches gujarat \
+pass a funny message to an empty div on the home page. does not want to direct user \
+to a new page.
+@ successful sign up
++ bottle to render the same page with success message. need a better UX work around.
+-># list dry days
++ enter dry days and get a list of all dry days
++@ a one time call to db when page loads, pass all state and dry days to js. \
+a drop down to choose state and js renders that page.
+
