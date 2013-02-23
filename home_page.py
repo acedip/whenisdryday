@@ -77,8 +77,8 @@ def new_info():
 		new_state = request.GET.get('state').strip()
 		get_pic = state_pics[new_state]
 #		Table schema
-#		CREATE TABLE userdb1 (first_name char(30), last_name char(30) ,email varchar(50), state char(30) , primary key (email, state) )
-		c.execute("insert into dw_user (first_name,last_name,email,state) values (?,?,?,?)",(new_first_name, new_last_name, new_email, new_state))
+#		CREATE TABLE userdb1 (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
+		c.execute("insert into dw_user (first_name,last_name,email,pri_state) values (?,?,?,?)",(new_first_name, new_last_name, new_email, new_state))
 		con.commit()
 		c.close()
 		
