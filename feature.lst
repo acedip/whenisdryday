@@ -29,6 +29,8 @@
 ==
 
 # Home page
++ some text to describe the process (how would they not miss a dry day) in a few words.
++ error handling - a funny pic or message (run ! run ! run ! Its a Raid!)
 @ when gujarat entered = needs more thinking.
 + js to pass state value entered and if it matches gujarat \
 pass a funny message to an empty div on the home page. do not want to direct user \
@@ -44,6 +46,6 @@ a drop down to choose state and js renders that page.
 @exception handling for 500
 +concurrent db read/writes to avoid 500 in db lock case.why would it arise. it arose once in test.
 -># wet days
-+ two versions of wet days. a new signed up user coming here with a success message with preferably his first name.
++ two versions of wet days. (successful signup) a new signed up user coming here with a success message with preferably his first name.
 + and a second fixed version accessible from home page.
 
