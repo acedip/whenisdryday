@@ -1,3 +1,19 @@
 .custom {
     width: 190px ;
 }
+
+.doolally {
+padding-top: 10px;
+padding-bottom: 10px;
+background-image: url('doolally3.png');
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+background-repeat:no-repeat;
+background-position:top;   
+display: compact;
+width: auto; /* or any other value */
+height: 710px;
+
+}
+

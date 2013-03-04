@@ -221,6 +221,7 @@ textarea {
   }
 }
 
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -228,11 +229,10 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #eee;
-  background: url('doolally3.png');
+  /*background: url('doolally3.png'); */
   background-repeat:no-repeat;
-  background-position:top; 
-  display: compact;
-  
+  background-position:top;   
+  /*background-attachment:fixed; */
 }
 
 a {
@@ -2287,7 +2287,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+/*  background-image: url("../img/glyphicons-halflings.png"); */
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -4361,7 +4361,7 @@ input[type="submit"].btn.btn-mini {
 .navbar {
   *position: relative;
   *z-index: 2;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   overflow: visible;
 }
 
