@@ -11,7 +11,10 @@ background-position:top;
 display: compact;
 width: auto; /* or any other value */
 background-size:100% 100%;
-/*height: 710px; /
-
+min-height: 100%; 
+height: 100%;
 }
 
+.lame_input {
+  width: 150px;
+}
