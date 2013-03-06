@@ -228,11 +228,11 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  /*background-color: #eee;
-  background: url('doolally3.png'); 
+  background-color: #eee;
+  /*background: url('doolally3.png'); */
   background-repeat:no-repeat;
   background-position:top;   
-  background-attachment:fixed; */
+  /*background-attachment:fixed; */
 }
 
 a {
