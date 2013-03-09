@@ -56,8 +56,9 @@ state_pics = {
 
 # DB Connection
 con = sqlite3.connect('sample.db')
-c = con.cursor()
+gDBConn = con.cursor()
 
+'''
 # SES | Mail connection
 #s = smtplib.SMTP("email-smtp.us-east-1.amazonaws.com")
 s = smtplib.SMTP("ses-smtp-prod-335357831.us-east-1.elb.amazonaws.com")
@@ -66,22 +67,34 @@ from ses_cred import ses_cred as ses
 user_name = ses.cred['user']
 user_pswd = ses.cred['pswd']
 s.login(user_name,user_pswd)
+'''
+
+def fHomePageNewUser(lHtmlFields, sNameTB, vDBConn):
+	lUserValues= [];	#empty list
+	for sEntry in lHtmlFields:
+		lUserValues.append(request.GET.get(sEntry).strip())
+	
+	vDBConn.execute("insert into +"+sNameTB+" ("+lHtmlFields[0]+","+lHtmlFields[1]+","+lHtmlFields[2]+","+lHtmlFields[3]+") values (?,?,?,?)",(lUserValues[0], lUserValues[1], lUserValues[2], lUserValues[3]))
+	vDBConn.commit()
+	vDBConn.close()
 
 @route('/new', method='GET')
 def new_info():
 	if request.GET.get('save','').strip():
-		
+		lHtmlFields= ['first_name', 'last_name', 'email', 'state']
+		fHomePageNewYear(lHtmlFields, 'dw_user', gDBConn)
+		'''
 		new_first_name = request.GET.get('first_name').strip()
 		new_last_name = request.GET.get('last_name').strip()
 		new_email = request.GET.get('email').strip()
 		new_state = request.GET.get('state').strip()
 		get_pic = state_pics[new_state]
 #		Table schema
-#		CREATE TABLE userdb1 (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
+#		CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
 		c.execute("insert into dw_user (first_name,last_name,email,pri_state) values (?,?,?,?)",(new_first_name, new_last_name, new_email, new_state))
 		con.commit()
 		c.close()
-		
+		'''
 		sender='mail@whenisdryday.in'
 		fname=new_first_name
 		email=new_email
