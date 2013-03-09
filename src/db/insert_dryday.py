@@ -16,31 +16,41 @@
 import sqlite3
 from bottle import route, run, debug, template, request
 
-@route('/insert', method='GET')
-def new_info():
+# DB Connection
+con = sqlite3.connect('sample.db')
+gDBConn = con.cursor()
+# Table Name
+sWUser = dw_user
+sWDryDay = dw_dryday
+
+@route('/insertdryday', method='GET')
+def insert_dry_days():
 	if request.GET.get('save','').strip():
 		
-		new_drydate = request.GET.get('drydate').strip()
+		new_drydate = request.GET.get('dw_dryday').strip()
 		new_state = request.GET.get('state').strip()
 	
-		con = sqlite3.connect('sample.db')
-		c = con.cursor()
 #		Table schema
-#		CREATE TABLE dryday (drydate integer, state char(30) , primary key(drydate,state) )
-		c.execute("insert into dryday (drydate,state) values (?,?)",(new_drydate, new_state))
-		con.commit()
-		c.close()
+#		CREATE TABLE dryday (dw_dryday integer, state char(30) , primary key(dw_dryday,state) )
+		gDBConn.execute("insert into dryday (dw_dryday,state) values (?,?)",(new_drydate, new_state))
+		gDBConn.commit()
+		gDBConn.close()
 		return template('insert_dryday.tpl')
 	else:
 		return template('insert_dryday.tpl')
 
-@route('/check')
-def todo_list():
-	con = sqlite3.connect('sample.db')
-	c = con.cursor()
-	c.execute("select * from dryday")
-	result = c.fetchall()
-	c.close()
+@route('/listdryday')
+def list_all_drydays():
+	gDBConn.execute("select * from dryday")
+	result = gDBConn.fetchall()
+	gDBConn.close()
+	return template('make_table',rows=result)
+
+@route('/listuser')
+def list_all_users():
+	gDBConn.execute("select * from dw_user")
+	result = gDBConn.fetchall()
+	gDBConn.close()
 	return template('make_table',rows=result)
 
 debug(True) #not in production. same for reloader=True
