@@ -25,7 +25,7 @@
 	h2 {
 		font-weight: normal;
   		font-size: 40px;
-		margin-left:30%;
+		margin-left: 20%;
 		text-align: left;
 	}
 	#main {
@@ -48,20 +48,10 @@
 </head>
 
 <body>
-<form action="/insertdryday" method="GET"> 
 	<div id='main'>
-   	     <h1>When is Dry Day</h1>
-   	     <h2> For internal use only<br>Insert Dry Days info in db</h2>
-   	     <p>Date format YYYY-MM-DD. For Eg 2012-01-01<br>
-   	     	Sate in all lower case</p>
-   	     
-		<input type="text" name="drydate" placeholder="Dry Date" required style="width: 200px; padding: 8px" > <br>
-		<input type="text" name="state" placeholder="State" required style="width: 200px; padding: 8px"> <br><br>
-		
-		<input type="submit" name="save" value="Save" style="width: 100px; padding: 5px; background-color: #3682B4; color: #FFFFFF; border-radius:10px">
-		<p> You will never miss a Dry Day ever again. Well only if you have access to your emails. We don't plan to send guys with booze to your house. </p>
+   	     <h1>use exisits</h1>
+   	     <h2>hahahahah</h2>
 	</div>
-</form>
 </body>
 </html>
 
