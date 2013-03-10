@@ -55,11 +55,10 @@ state_pics = {
 'pondicherry'		:'./state_pics/pondicherry.jpg' }
 
 # DB Connection
-con = sqlite3.connect('sample.db')
-gDBConn = con.cursor()
+con = sqlite3.connect('./db/sample.db')
 # Table Name
-sWUser = dw_user
-sWDryDay = dw_dryday
+sWUser = 'userdb1' #dw_user
+sWDryDay = 'dryday' #dw_dryday
 
 '''
 # SES | Mail connection
@@ -72,36 +71,45 @@ user_pswd = ses.cred['pswd']
 s.login(user_name,user_pswd)
 '''
 
-def fNewUserData(lHtmlFields, sWUser, vDBConn):
+def fValidateUser(lUserValues):
+	gDBConn = con.cursor()
+	gDBConn.execute("select email from "+sWUser+" where email = '"+lUserValues[2]+"'")
+	vUserExist = gDBConn.fetchall()
+	print vUserExist
+	return vUserExist
+
+
+def fNewUserData(lHtmlFields, sWUser):
 	lUserValues= []	#empty list to take in user values
 	for sEntry in lHtmlFields:
 		lUserValues.append(request.GET.get(sEntry).strip())
+		
+	if len(fValidateUser(lUserValues))>0:
+		return []
+	
 	# Table schema
 	# CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
-	vDBConn.execute("insert into "+sWUser+" ("+lHtmlFields[0]+","+lHtmlFields[1]+","+lHtmlFields[2]+","+lHtmlFields[3]+") \
+	gDBConn = con.cursor()
+	gDBConn.execute("insert into "+sWUser+" ("+lHtmlFields[0]+","+lHtmlFields[1]+","+lHtmlFields[2]+","+lHtmlFields[3]+") \
 		values (?,?,?,?)",(lUserValues[0], lUserValues[1], lUserValues[2], lUserValues[3]))
-	vDBConn.commit()
-	vDBConn.close()
+	con.commit()
+	gDBConn.close()
 	return lUserValues
-	
-def fValidateUser(lUserValues):
-	vDBConn.execute("select email from"+sWUser+" where email="+lUserValues[2]+"")
-	vUserExist = vDBConn.fetchall()
-	return vUserExist
+
 
 def fAllDryDays():
 #	Table schema
 #	CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
-	vDBConn.execute("select * from "+sWDryDay+"")
-	vAllDays = vDBConn.fetchall()
+	gDBConn.execute("select * from "+sWDryDay+"")
+	vAllDays = gDBConn.fetchall()
 	return dict(vAllDays)
 
 @route('/new', method='GET')
 def new_user():
 	if request.GET.get('save','').strip():
 		lHtmlFields= ['first_name', 'last_name', 'email', 'state']
-		fNewUserData(lHtmlFields, 'dw_user', gDBConn)
-		if len(fValidateUser(lUserValues))>0:
+		lUserValues = fNewUserData(lHtmlFields, sWUser)
+		if (lUserValues == []):
 			return template('userexists.tpl')
 		else:
 			return template('success.tpl')
@@ -110,10 +118,11 @@ def new_user():
 
 # Push all state and dry days to js in the file.
 # js to store it for faster rendering
-@route('/alldrydays', method='GET')
+"""@route('/alldrydays', method='GET')
 def list_all_drydays():
 	vAllDryDays = fAllDryDays()
 	return template('listalldryday.tpl')
+"""
 
 # Temporary function. The main email function to store default details which will be used in email functions across.
 # fMainEmail -> fSuccessEmail 
