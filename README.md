@@ -11,9 +11,9 @@ Copyright (C) 2013  Anirudh singh shekhawat shekhawat.anirudh@gmail.com
 Contributors
 ------------
 Current Contributors.
-+[Kumarl Vishal] - Back End {https://github.com/vishal733}
-+[Vishal Arora] - UI {https://github.com/vishal2018
-+[Anirudh Singh Shekhawat] Back End, UI {https://github.com/acedip}
++ Back End - [Kumarl Vishal] {https://github.com/vishal733}.
++ UI [Vishal Arora] {https://github.com/vishal2018}.
++ Back End, UI - [Anirudh Singh Shekhawat] {https://github.com/acedip}.
 
 Set Up
 ------
