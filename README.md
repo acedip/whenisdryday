@@ -1,6 +1,5 @@
 whenisdryday
 ============
-
 whenisdryday.in is an email subscription based web service to inform users 
 about dry day in India.
 Copyright (C) 2013  Anirudh singh shekhawat shekhawat.anirudh@gmail.com
