@@ -72,6 +72,13 @@ s.login(user_name,user_pswd)
 '''
 
 def fValidateUser(lUserValues):
+	"""
+	Validate if the Email user entered already exists in db.
+	
+	If True user re-directed to the signup with error stating
+	user email you entered already exists. Try Again.
+	If False, user allowed to sign up
+	"""
 	gDBConn = con.cursor()
 	gDBConn.execute("select email from "+sWUser+" where email = '"+lUserValues[2]+"'")
 	vUserExist = gDBConn.fetchall()
@@ -80,29 +87,25 @@ def fValidateUser(lUserValues):
 
 
 def fNewUserData(lHtmlFields, sWUser):
-	lUserValues= []	#empty list to take in user values
+	"""
+	Parse user inputs and put save it in db. retrun user entered fields.
+	
+	Extract user entered fields from lHtmlFields. Call validate function
+	before saving it to the db. Table schema for the user table is - 
+	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
+	
+	"""
+	lUserValues= []	
 	for sEntry in lHtmlFields:
-		lUserValues.append(request.GET.get(sEntry).strip())
-		
+		lUserValues.append(request.GET.get(sEntry).strip())		
 	if len(fValidateUser(lUserValues))>0:
 		return []
-	
-	# Table schema
-	# CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
 	gDBConn = con.cursor()
 	gDBConn.execute("insert into "+sWUser+" ("+lHtmlFields[0]+","+lHtmlFields[1]+","+lHtmlFields[2]+","+lHtmlFields[3]+") \
 		values (?,?,?,?)",(lUserValues[0], lUserValues[1], lUserValues[2], lUserValues[3]))
 	con.commit()
 	gDBConn.close()
 	return lUserValues
-
-
-def fAllDryDays():
-#	Table schema
-#	CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
-	gDBConn.execute("select * from "+sWDryDay+"")
-	vAllDays = gDBConn.fetchall()
-	return dict(vAllDays)
 
 @route('/new', method='GET')
 def new_user():
@@ -115,6 +118,18 @@ def new_user():
 			return template('success.tpl')
 	else:
 		return template('new_user.tpl')
+
+def fAllDryDays():
+	"""
+	list all dry days of all state.
+	Implimentation missing. AJAX implimentation expected
+	Table schema for the dryday table
+	CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
+	
+	"""
+	gDBConn.execute("select * from "+sWDryDay+"")
+	vAllDays = gDBConn.fetchall()
+	return dict(vAllDays)
 
 # Push all state and dry days to js in the file.
 # js to store it for faster rendering
