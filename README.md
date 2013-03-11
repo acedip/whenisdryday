@@ -1,33 +1,16 @@
-ReMarkdown: about, details, sampler, issues
+whenisdryday
+============
 
-ReMarkdown — Display HTML as Markdown text
-ReMarkdown is a CSS experiment and reusable stylesheet for displaying simple HTML text as its Markdown equivalent. To get a feel of what it does, look at the HTML source of this very page.
+whenisdryday.in is an email subscription based web service to inform users 
+about dry day in India.
+Copyright (C) 2013  Anirudh singh shekhawat shekhawat.anirudh@gmail.com
 
-What’s the point?
-Well, if you love Markdown, or want your simple HTML pages to look deceptively like good old plain text, the remarkdown.css stylesheet is for you!
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, version 3 of the License
 
-I don’t really expect this stylesheet to be widely used, and don’t even know if I’ll use it myself. But it was a nice CSS challenge to work on: no background images, no borders, only plain text characters.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details http://www.gnu.org/licenses
 
-Browser support:
-All modern, CSS 2.1-compliant browsers should handle these styles with ease. There might be minor issues on IE8. IE7 is not supported.
-
-Basic usage
-An example HTML page using ReMarkdown would look like this:
-
-<!doctype html>
-<html lang="en">
-<head>
-  <title>Using ReMarkdown</title>
-  <link rel="stylesheet" href="remarkdown.css">
-</head>
-<body class="rmd-on">
-  <h1>Hello World</h1>
-  <p>Goodnight, and good luck.</p>
-</body>
-</html>
-You will need to download a copy of remarkdown.css, and put it in the same directory as your HTML page. Note that we need to declare the rmd-on class somewhere in the document: on the body element, on a container article or div element, your call.
-
-See the details page for available options.
-
-Copyright and stuff
-Both remarkdown.css and the optional script rmd-print.js are free software under the DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE.
