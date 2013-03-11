@@ -4,7 +4,7 @@ whenisdryday ?
 Description
 -----------
 whenisdryday.in is an email subscription based web service to inform users 
-about dry days (Sale of alcohol is banned) in India.
+about dry days (Sale of alcohol is prohibited) in India.
 And there are a lot of such days.
 Copyright (C) 2013  Anirudh singh shekhawat shekhawat.anirudh@gmail.com
 
