@@ -15,44 +15,6 @@
 
 import sqlite3
 from bottle import route, run, debug, template, request
-import smtplib
-
-state_pics = {
-'andhra pradesh'	:'./state_pics/andhrapradesh.jpg' ,\
-'arunachal pradesh'	:'./state_pics/arunachalpradesh.jpg' ,\
-'assam'				:'./state_pics/assam.jpg' ,\
-'bihar'				:'./state_pics/bihar.jpg' ,\
-'chhattisgarh'		:'./state_pics/chhattisgarh.jpg' ,\
-'goa'				:'./state_pics/goa.jpg' ,\
-'gujarat'			:'./state_pics/gujarat.jpg' ,\
-'haryana'			:'./state_pics/haryana.jpg' ,\
-'himachal pradesh'	:'./state_pics/himachalpradesh.jpg' ,\
-'jammu and kashmir'	:'./state_pics/jammuandkashmir.jpg' ,\
-'jharkhand'			:'./state_pics/jharkhand.jpg' ,\
-'karnataka'			:'./state_pics/karnataka.jpg' ,\
-'kerala'			:'./state_pics/kerala.jpg' ,\
-'madya pradesh'		:'./state_pics/madyapradesh.jpg' ,\
-'maharashtra'		:'./state_pics/maharashtra.jpg' ,\
-'manipur'			:'./state_pics/manipur.jpg' ,\
-'meghalaya'			:'./state_pics/meghalaya.jpg' ,\
-'mizoram'			:'./state_pics/mizoram.jpg' ,\
-'nagaland'			:'./state_pics/nagaland.jpg' ,\
-'orissa'			:'./state_pics/orissa.jpg' ,\
-'punjab'			:'./state_pics/punjab.jpg' ,\
-'rajasthan'			:'./state_pics/rajasthan.jpg' ,\
-'sikkim'			:'./state_pics/sikkim.jpg' ,\
-'tamil nadu'		:'./state_pics/tamilnadu.jpg' ,\
-'tripura'			:'./state_pics/tripura.jpg' ,\
-'uttaranchal'		:'./state_pics/uttaranchal.jpg' ,\
-'uttar pradesh'		:'./state_pics/uttarpradesh.jpg' ,\
-'west bengal'		:'./state_pics/westbengal.jpg' ,\
-'andaman and nicobar islands':'./state_pics/andamanandnicobarislands.jpg' ,
-'chandigarh'		:'./state_pics/chandigarh.jpg' ,\
-'dadar and nagar haveli':'./state_pics/dadarandnagarhaveli.jpg' ,\
-'daman and diu'		:'./state_pics/damananddiu.jpg' ,\
-'delhi'				:'./state_pics/delhi.jpg' ,\
-'lakshadeep'		:'./state_pics/lakshadeep.jpg' ,\
-'pondicherry'		:'./state_pics/pondicherry.jpg' }
 
 # DB Connection
 con = sqlite3.connect('./db/sample.db')
@@ -61,6 +23,7 @@ sWUser = 'userdb1' #dw_user
 sWDryDay = 'dryday' #dw_dryday
 
 '''
+import smtplib
 # SES | Mail connection
 #s = smtplib.SMTP("email-smtp.us-east-1.amazonaws.com")
 s = smtplib.SMTP("ses-smtp-prod-335357831.us-east-1.elb.amazonaws.com")
