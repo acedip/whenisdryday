@@ -10,10 +10,10 @@ Copyright (C) 2013  Anirudh singh shekhawat shekhawat.anirudh@gmail.com
 
 Contributors
 ------------
-Current Contributors.
-+ Back End - [Kumar Vishal] (https://github.com/vishal733)
-+ UI - [Vishal Arora] (https://github.com/vishal2018)
-+ Back End, UI - [Anirudh Singh Shekhawat] (https://github.com/acedip)
+Current Contributors. The list will grow (hopefully) soon once out of alfa release.
++ Back End - [Kumar Vishal] (https://github.com/vishal733). Feared as KV in the dark underworld of mobile image processing.
++ UI - [Vishal Arora] (https://github.com/vishal2018). Respected as Vishal. He's the normal one. Old soul in a young body.
++ Back End, UI - [Anirudh Singh Shekhawat] (https://github.com/acedip). Loved as Acedip. The dude. A fellow dude of [Dudeism](http://dudeism.com/).
 
 Set Up
 ------
