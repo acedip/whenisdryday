@@ -50,6 +50,37 @@ def fValidateUser(lUserValues):
 	print vUserExist
 	return vUserExist
 
+def fSuccessMail(lUserValues):
+	"""
+	function argument = state of the successful user
+	Returns all dry days in that state
+	"""
+	gDBConn = con.cursor()
+	gDBConn.execute("select * from "+sWDryDay+" where state = '"+lUserValues[3]+"'")
+	lStatedryday = gDBConn.fetchall()
+	return template (success_mail.tpl, htmldryday=lStatedryday,)
+
+me = 'tequila@whenisdryday.in'
+
+def fSendMail(me,lUserEmail):
+	"""
+	Email Sending
+	fSuccessEmail called and fed into the MIME Text as msg
+	msg is a list. with values like sender, subject etc
+	Returns success if email sent
+	"""
+	msg = MIMEText(fSuccessMail(lUserEmail))
+	msg['Subject'] = 'Subscription to whenisdryday.in successful'
+	msg['From'] = me
+	msg['To'] = lUserValues[2]
+	you = lUserValues[2]
+	# Commenting sending as it wouldn't work right now
+	#gMail.sendmail(me, you, msg.as_string())
+	print "message successully sent"
+	f = write('email.html','w')
+	print >> 'Email Success :', f
+	return 1
+
 
 def fNewUserData(lHtmlFields, sWUser):
 	"""
@@ -70,38 +101,8 @@ def fNewUserData(lHtmlFields, sWUser):
 		values (?,?,?,?)",(lUserValues[0], lUserValues[1], lUserValues[2], lUserValues[3]))
 	con.commit()
 	gDBConn.close()
+	fSendMail(me,lUserValues[2])
 	return lUserValues
-
-def fSuccessMail(lUserValues):
-	"""
-	function argument = state of the successful user
-	Returns all dry days in that state
-	"""
-	gDBConn = con.cursor()
-	gDBConn.execute("select * from "+sWDryDay+" where state = '"+lUserValues[3]+"'")
-	lStatedryday = gDBConn.fetchall()
-	return template (success_mail.tpl, htmldryday=lStatedryday,)
-
-me = 'tequila@whenisdryday.in'
-
-def fSendMail(me,lUserEmail):
-	"""
-	Email Sending
-	fSuccessEmail called and fed into the MIME Text as msg
-	msg is a list. with values like sender, subject etc
-	Returns success if email sent
-	"""
-	msg = MIMETEXT(fSuccessMail())
-	msg['Subject'] = 'Subscription to whenisdryday.in successful'
-	msg['From'] = me
-	msg['To'] = lUserValues[2]
-	you = lUserValues[2]
-	# Commenting sending as it wouldn't work right now
-	#gMail.sendmail(me, you, msg.as_string())
-	print "message successully sent"
-	f = write('email.html','w')
-	print >> 'Email Success :', f
-	return 1
 
 @route('/new', method='GET')
 def new_user():
@@ -116,7 +117,6 @@ def new_user():
 		return template('new_user.tpl')
 
 # Send Mail Calling 
-fSendMail(me,lUserValues[2])
 
 def fAllDryDays():
 	"""
