@@ -27,16 +27,15 @@ sWDryDay = 'dryday' #dw_dryday
 import smtplib
 # SES | Mail connection
 #s = smtplib.SMTP("email-smtp.us-east-1.amazonaws.com")
-gMail = smtplib.SMTP("ses-smtp-prod-335357831.us-east-1.elb.amazonaws.com")
-gMail.starttls()
+s = smtplib.SMTP("ses-smtp-prod-335357831.us-east-1.elb.amazonaws.com")
+s.starttls()
 from ses_cred import ses_cred as ses
 user_name = ses.cred['user']
 user_pswd = ses.cred['pswd']
-gMail.login(user_name,user_pswd)
-gMail.sendmail(sender, email, message)
+s.login(user_name,user_pswd)
 '''
 
-def fValidateUser(lUserValues):
+def fValidateUser(dUserInfo):
 	"""
 	Validate if the Email user entered already exists in db.
 	
@@ -45,35 +44,38 @@ def fValidateUser(lUserValues):
 	If False, user allowed to sign up
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select email from "+sWUser+" where email = '"+lUserValues[2]+"'")
+	gDBConn.execute("select email from "+sWUser+" where email = '"+dUserInfo['email']+"'")
 	vUserExist = gDBConn.fetchall()
-	print vUserExist
-	return vUserExist
+	#print vUserExist
+	if len(vUserExist)>0:
+		return 0
+	else:
+		return 1
 
-def fSuccessMail(lUserValues):
+def fSuccessMail(dUserInfo):
 	"""
 	function argument = state of the successful user
 	Returns all dry days in that state
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select * from "+sWDryDay+" where state = '"+lUserValues[3]+"'")
+	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state']+"'")
 	lStatedryday = gDBConn.fetchall()
 	return template (success_mail.tpl, htmldryday=lStatedryday,)
 
 me = 'tequila@whenisdryday.in'
 
-def fSendMail(me,lUserEmail):
+def fSendMail(me,dUserInfo):
 	"""
 	Email Sending
 	fSuccessEmail called and fed into the MIME Text as msg
 	msg is a list. with values like sender, subject etc
 	Returns success if email sent
 	"""
-	msg = MIMEText(fSuccessMail(lUserEmail))
+	msg = MIMEText(fSuccessMail(dUserInfo))
 	msg['Subject'] = 'Subscription to whenisdryday.in successful'
 	msg['From'] = me
-	msg['To'] = lUserValues[2]
-	you = lUserValues[2]
+	msg['To'] = dUserInfo[email]
+	you = lUserValues[email]
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
@@ -91,32 +93,31 @@ def fNewUserData(lHtmlFields, sWUser):
 	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
 	
 	"""
-	lUserValues= []	
+	dUserInfo= {}
 	for sEntry in lHtmlFields:
-		lUserValues.append(request.GET.get(sEntry).strip())		
-	if len(fValidateUser(lUserValues))>0:
-		return []
+		dUserInfo[sEntry]= request.GET.get(sEntry).strip()
+	if (fValidateUser(dUserInfo)==0):
+		dUserInfo['first_name']="User Exists"
+		return dUserInfo
 	gDBConn = con.cursor()
-	gDBConn.execute("insert into "+sWUser+" ("+lHtmlFields[0]+","+lHtmlFields[1]+","+lHtmlFields[2]+","+lHtmlFields[3]+") \
-		values (?,?,?,?)",(lUserValues[0], lUserValues[1], lUserValues[2], lUserValues[3]))
+	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state) \
+		values (?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state']))
 	con.commit()
 	gDBConn.close()
-	fSendMail(me,lUserValues[2])
-	return lUserValues
+	fSendMail(me,dUserInfo)
+	return dUserInfo
 
 @route('/new', method='GET')
 def new_user():
 	if request.GET.get('save','').strip():
 		lHtmlFields= ['first_name', 'last_name', 'email', 'state']
-		lUserValues = fNewUserData(lHtmlFields, sWUser)
-		if (lUserValues == []):
+		dUserInfo = fNewUserData(lHtmlFields, sWUser)
+		if (dUserInfo['first_name'] == "User Exists"):
 			return template('userexists.tpl')
 		else:
 			return template('success.tpl')
 	else:
 		return template('new_user.tpl')
-
-# Send Mail Calling 
 
 def fAllDryDays():
 	"""
@@ -141,7 +142,7 @@ def list_all_drydays():
 # Temporary function. The main email function to store default details which will be used in email functions across.
 # fMainEmail -> fSuccessEmail 
 # fMainEmail -> fDryDayEmail 
-def fMainEmail (lUserValues):
+def fMainEmail (dUserInfo):
 		sender='mail@whenisdryday.in'
 		message = """From: Dry Day <tequila@whenisdryday.in>
 		To: %s <%s>
@@ -150,7 +151,7 @@ def fMainEmail (lUserValues):
 		LETS HAVE A TEQUILA
 		"this is the image location %s
 		Tomorrow is a dry day in %s
-		""" %(lUserValues[0], lUserValues[1], lUserValues[2], lUserValues[3])
+		""" %(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state'])
 		s.sendmail(sender, email, message)
 		print "Successfully sent email"
 
