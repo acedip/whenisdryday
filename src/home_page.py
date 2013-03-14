@@ -60,7 +60,7 @@ def fSuccessMail(dUserInfo):
 	gDBConn = con.cursor()
 	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state']+"'")
 	lStatedryday = gDBConn.fetchall()
-	return template (success_mail.tpl, htmldryday=lStatedryday,)
+	return template ('success_mail.tpl', htmldryday=lStatedryday)
 
 me = 'tequila@whenisdryday.in'
 
@@ -74,13 +74,13 @@ def fSendMail(me,dUserInfo):
 	msg = MIMEText(fSuccessMail(dUserInfo))
 	msg['Subject'] = 'Subscription to whenisdryday.in successful'
 	msg['From'] = me
-	msg['To'] = dUserInfo[email]
-	you = lUserValues[email]
+	msg['To'] = dUserInfo['email']
+	you = dUserInfo['email']
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
-	f = write('email.html','w')
-	print >> 'Email Success :', f
+	#f = write('email.html','w')
+	#print >> 'Email Success :', f
 	return 1
 
 
@@ -104,7 +104,6 @@ def fNewUserData(lHtmlFields, sWUser):
 		values (?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state']))
 	con.commit()
 	gDBConn.close()
-	fSendMail(me,dUserInfo)
 	return dUserInfo
 
 @route('/new', method='GET')
@@ -115,6 +114,7 @@ def new_user():
 		if (dUserInfo['first_name'] == "User Exists"):
 			return template('userexists.tpl')
 		else:
+			fSendMail(me,dUserInfo)
 			return template('success.tpl')
 	else:
 		return template('new_user.tpl')
