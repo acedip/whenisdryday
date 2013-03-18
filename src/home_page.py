@@ -60,7 +60,7 @@ def fSuccessMail(dUserInfo):
 	gDBConn = con.cursor()
 	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state']+"'")
 	lStatedryday = gDBConn.fetchall()
-	return template ('success_mail.tpl', htmldryday=lStatedryday)
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, htmldryday=lStatedryday )
 
 me = 'tequila@whenisdryday.in'
 
