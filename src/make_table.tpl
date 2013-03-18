@@ -2,7 +2,7 @@
 <p>The open items are as follows:</p>
 <table border="1">
 <!-- <tr><th>Feature</th><th>Start</th><th>End</th></tr> -->
-%for row in rows:
+%for row in htmldryday:
   <tr>
   %for col in row:
     <td>{{col}}</td>

@@ -79,19 +79,20 @@ def fSendMail(me,dUserInfo):
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
-	#f = write('email.html','w')
-	#print >> 'Email Success :', f
+	f=open('./mail.html','w')
+	print >> f, msg.as_string()
+#	f = write('email.html','w')
+	f.close()
+#	print >> 'Email Success :', f
 	return 1
 
 
 def fNewUserData(lHtmlFields, sWUser):
 	"""
 	Parse user inputs and put save it in db. retrun user entered fields.
-	
 	Extract user entered fields from lHtmlFields. Call validate function
 	before saving it to the db. Table schema for the user table is - 
 	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
-	
 	"""
 	dUserInfo= {}
 	for sEntry in lHtmlFields:
@@ -104,7 +105,10 @@ def fNewUserData(lHtmlFields, sWUser):
 		values (?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state']))
 	con.commit()
 	gDBConn.close()
+	fSendMail(me,dUserInfo)
 	return dUserInfo
+
+print "before /new" 
 
 @route('/new', method='GET')
 def new_user():
@@ -114,10 +118,11 @@ def new_user():
 		if (dUserInfo['first_name'] == "User Exists"):
 			return template('userexists.tpl')
 		else:
-			fSendMail(me,dUserInfo)
 			return template('success.tpl')
 	else:
 		return template('new_user.tpl')
+
+print "after /new" 
 
 def fAllDryDays():
 	"""
