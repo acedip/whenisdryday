@@ -27,7 +27,7 @@ will come later.
 	* you are done. This is the test home page.
 4. Type "localhost/new" in your browser
 
-##### If you face any problems, just email me.
+###### If you face any problems, just email me.
 
 ## To Dos
 This will be tracked seperately in Issues.
