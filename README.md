@@ -31,4 +31,4 @@ We just hope you are linux but if you are one of those guys..just kidding.
 This will be tracked seperately in Issues.
 
 ## License
-This program is a free and open source software under **Creative Commons License __Attribution + Noncommercial + ShareAlike (by-nc-sa).__**
+This program is a free and open source software under **Creative Commons License _Attribution + Noncommercial + ShareAlike (by-nc-sa)._**
