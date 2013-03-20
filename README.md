@@ -13,18 +13,21 @@ will come later.
 ### Linux
 1. Install Python
 2. Install [Bottle](http://bottlepy.org). It doesnt really need anything other than python.
-3. On Ubuntu for instance - "apt-get install bottle" would just do fine.
-4. fire up src/home_page.py
-	* you are done.
-5. goto the home page localhost/new
+	* On Ubuntu for instance - "apt-get install bottle" would just do fine.
+3. Fire up src/home_page.py
+	* you are done. This is the test home page.
+4. Type "localhost/new" in your browser
 
 ### Windows
-1. Install Pyhton
-2. Install [easy_install](https://pypi.python.org/pypi/setuptools#windows).
-3. Just hit "easy_install -U bottle" in command prompt to install Bottle.
-4. fire up src/home_page.py
-	* you are done.
-5. goto the home page localhost/new
+1. Install Python
+2. Install Bottle
+	* Install [easy_install](https://pypi.python.org/pypi/setuptools#windows).
+	* To Install Bottle, just hit "easy_install -U bottle" in command prompt.
+3. Fire up src/home_page.py
+	* you are done. This is the test home page.
+4. Type "localhost/new" in your browser
+
+#### If you face any problems, just email me.
 
 ## To Dos
 This will be tracked seperately in Issues.
