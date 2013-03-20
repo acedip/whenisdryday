@@ -27,8 +27,8 @@ We just hope you are linux but if you are one of those guys..just kidding.
 	* you are done.
 5. goto the home page localhost/new
 
-### To Dos
+## To Dos
 This will be tracked seperately in Issues.
 
-### License
-This program is a free and open source software under Creative Commons License = Attribution + Noncommercial + ShareAlike (by-nc-sa).
+## License
+This program is a free and open source software under **Creative Commons License __Attribution + Noncommercial + ShareAlike (by-nc-sa).__**
