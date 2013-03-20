@@ -19,7 +19,6 @@ will come later.
 5. goto the home page localhost/new
 
 ### Windows
-We just hope you are linux but if you are one of those guys..just kidding.
 1. Install Pyhton
 2. Install [easy_install](https://pypi.python.org/pypi/setuptools#windows).
 3. Just hit "easy_install -U bottle" in command prompt to install Bottle.
