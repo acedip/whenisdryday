@@ -54,7 +54,10 @@
    	    <input type="text" name="first_name" placeholder="First Name" style="width: 200px; padding: 8px" > <br>
    	    <input type="text" name="last_name" placeholder="Last Name" style="width: 200px; padding: 8px" > <br> 
 		<input type="text" name="email" placeholder="Email" required style="width: 200px; padding: 8px" > <br>
-		<input type="text" name="state" placeholder="State" required style="width: 200px; padding: 8px"> <br><br>
+		<input type="text" name="state1" placeholder="State 1" required style="width: 200px; padding: 8px"> <br>
+		<input type="text" name="state2" placeholder="State 2" style="width: 200px; padding: 8px"> <br>
+		<input type="text" name="state3" placeholder="State 3" style="width: 200px; padding: 8px"> <br><br>
+		
 		
 		<input type="submit" name="save" value="Sign Me Up" style="width: 100px; padding: 5px; background-color: #3682B4; color: #FFFFFF; border-radius:10px">
 		<p> You will never miss a Dry Day ever again. Well only if you have access to your emails. We don't plan to send guys with booze to your house. </p>
