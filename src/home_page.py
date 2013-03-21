@@ -20,8 +20,9 @@ from email.mime.text import MIMEText
 # DB Connection
 con = sqlite3.connect('./db/sample.db')
 # Table Name
-sWUser = 'userdb1' #dw_user
-sWDryDay = 'dryday' #dw_dryday
+sWUser = 'dw_user'
+sWUserLive = 'dw_user_live'
+sWDryDay = 'dw_dryday'
 
 '''
 import smtplib
@@ -58,9 +59,14 @@ def fSuccessMail(dUserInfo):
 	Returns all dry days in that state
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state']+"'")
-	lStatedryday = gDBConn.fetchall()
-	return template ('success_mail.tpl', dUserInfo=dUserInfo, htmldryday=lStatedryday )
+	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state1']+"'")
+	lState1 = gDBConn.fetchall()
+	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state2']+"'")
+	lState2 = gDBConn.fetchall()
+	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state3']+"'")
+	lState3 = gDBConn.fetchall()	
+	
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, lState1, lState2, lState3 )
 
 me = 'tequila@whenisdryday.in'
 
@@ -81,18 +87,21 @@ def fSendMail(me,dUserInfo):
 	print "message successully sent"
 	f=open('./mail.html','w')
 	print >> f, msg.as_string()
-#	f = write('email.html','w')
 	f.close()
-#	print >> 'Email Success :', f
 	return 1
-
 
 def fNewUserData(lHtmlFields, sWUser):
 	"""
 	Parse user inputs and put save it in db. retrun user entered fields.
 	Extract user entered fields from lHtmlFields. Call validate function
-	before saving it to the db. Table schema for the user table is - 
-	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
+	before saving it to the db. Table schema for the user table is -
+	 
+	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), 
+	state3 char(30), verified integer, primary key (email, state1) )
+	
+	CREATE TABLE dw_user_live (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), 
+	state3 char(30), verified integer, primary key (email, state1) )
+	
 	"""
 	dUserInfo= {}
 	for sEntry in lHtmlFields:
@@ -101,19 +110,25 @@ def fNewUserData(lHtmlFields, sWUser):
 		dUserInfo['first_name']="User Exists"
 		return dUserInfo
 	gDBConn = con.cursor()
-	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state) \
-		values (?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state']))
+	
+#	Insert into live table
+	gDBConn.execute("insert into "+sWUser_live+" (first_name,last_name,email,state1,state2,state3) \
+		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], \
+		dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+#	Insert into mother table
+	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state1,state2,state3) \
+		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], \
+		dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+		
 	con.commit()
 	gDBConn.close()
 	fSendMail(me,dUserInfo)
 	return dUserInfo
 
-print "before /new" 
-
 @route('/new', method='GET')
 def new_user():
 	if request.GET.get('save','').strip():
-		lHtmlFields= ['first_name', 'last_name', 'email', 'state']
+		lHtmlFields= ['first_name', 'last_name', 'email', 'state1', 'state2', 'state3','verified']
 		dUserInfo = fNewUserData(lHtmlFields, sWUser)
 		if (dUserInfo['first_name'] == "User Exists"):
 			return template('userexists.tpl')
@@ -122,43 +137,9 @@ def new_user():
 	else:
 		return template('new_user.tpl')
 
-print "after /new" 
-
-def fAllDryDays():
-	"""
-	list all dry days of all state.
-	Implimentation missing. AJAX implimentation expected
-	Table schema for the dryday table
-	CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
-	
-	"""
-	gDBConn.execute("select * from "+sWDryDay+"")
-	vAllDays = gDBConn.fetchall()
-	return dict(vAllDays)
 
 # Push all state and dry days to js in the file.
 # js to store it for faster rendering
-"""@route('/alldrydays', method='GET')
-def list_all_drydays():
-	vAllDryDays = fAllDryDays()
-	return template('listalldryday.tpl')
-"""
-
-# Temporary function. The main email function to store default details which will be used in email functions across.
-# fMainEmail -> fSuccessEmail 
-# fMainEmail -> fDryDayEmail 
-def fMainEmail (dUserInfo):
-		sender='mail@whenisdryday.in'
-		message = """From: Dry Day <tequila@whenisdryday.in>
-		To: %s <%s>
-		Subject: Tomorrow is dry day
-		This is a test e-mail message.
-		LETS HAVE A TEQUILA
-		"this is the image location %s
-		Tomorrow is a dry day in %s
-		""" %(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state'])
-		s.sendmail(sender, email, message)
-		print "Successfully sent email"
 
 debug(True) #not in production. same for reloader=True
 
