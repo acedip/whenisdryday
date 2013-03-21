@@ -31,7 +31,7 @@ def insert_dry_days():
 		new_state = request.GET.get('state').strip()
 	
 #		Table schema
-#		CREATE TABLE dryday (drydate integer, state char(30) , primary key(drydate,state) )
+#		CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
 		gDBConn = con.cursor()
 		gDBConn.execute("insert into "+sWDryDay+" (drydate,state) values (?,?)",(new_drydate, new_state))
 		con.commit()

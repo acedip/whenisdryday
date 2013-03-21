@@ -96,11 +96,9 @@ def fNewUserData(lHtmlFields, sWUser):
 	Extract user entered fields from lHtmlFields. Call validate function
 	before saving it to the db. Table schema for the user table is -
 	 
-	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), \
-	state3 char(30), verified integer, primary key (email, state1) )
+	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), state3 char(30), verified integer, primary key (email, state1) )
 	
-	CREATE TABLE dw_user_live (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), \
-	state3 char(30), verified integer, primary key (email, state1) )
+	CREATE TABLE dw_user_live (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), state3 char(30), verified integer, primary key (email, state1) )
 	
 	"""
 	dUserInfo= {}
