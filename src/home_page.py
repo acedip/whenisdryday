@@ -45,7 +45,7 @@ def fValidateUser(dUserInfo):
 	If False, user allowed to sign up
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select email from "+sWUser+" where email = '"+dUserInfo['email']+"'")
+	gDBConn.execute("select email from "+sWUserLive+" where email = '"+dUserInfo['email']+"'")
 	vUserExist = gDBConn.fetchall()
 	#print vUserExist
 	if len(vUserExist)>0:
@@ -113,12 +113,10 @@ def fNewUserData(lHtmlFields, sWUser):
 	
 #	Insert into live table
 	gDBConn.execute("insert into "+sWUserLive+" (first_name,last_name,email,state1,state2,state3) \
-		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], \
-		dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
 #	Insert into mother table
 	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state1,state2,state3) \
-		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], \
-		dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
 		
 	con.commit()
 	gDBConn.close()
