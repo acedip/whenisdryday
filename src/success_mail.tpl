@@ -190,7 +190,7 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                         <table class="w580" width="580" cellpadding="0" cellspacing="0" border="0">
                             <tbody><tr>
                                 <td class="w580" width="580">
-                                    <p align="left" class="article-title"><singleline label="Title">Hi FirstName LastName<br>Yay! Successful sign up. Cheers.</singleline></p>
+                                    <p align="left" class="article-title"><singleline label="Title">Hi {{dUserInfo['first_name']}} {{dUserInfo['last_name']}}<br>Yay! Successful sign up. Cheers.</singleline></p>
                                     <div align="left" class="article-content">
                                         <multiline label="Description">You will get an email like this before every dry day in your state.<br><br>Here are the dry days in your state</multiline>
                                     </div>
@@ -235,8 +235,24 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                        	%for row in htmldryday:
+                                        <tr> 
+                                        	%for row in state1: <!-- State one dry days -->
+                                        		<tr>
+                                        			%for col in row:
+                                        				<td>{{col}}</td>
+                                        			%end
+                                        		</tr>
+                                        	%end
+                                        	
+                                            %for row in state2: <!-- State two dry days -->
+                                        		<tr>
+                                        			%for col in row:
+                                        				<td>{{col}}</td>
+                                        			%end
+                                        		</tr>
+                                        	%end
+
+                                            %for row in state3: <!-- State three dry days -->
                                         		<tr>
                                         			%for col in row:
                                         				<td>{{col}}</td>
@@ -244,6 +260,7 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                         		</tr>
                                         	%end
                                             <tr>
+                                            
                                                 <td class="w280" width="280" height="50" border="1"></td>
                                             </tr>
         								    <tr>
