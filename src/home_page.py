@@ -66,7 +66,7 @@ def fSuccessMail(dUserInfo):
 	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state3']+"'")
 	lState3 = gDBConn.fetchall()	
 	
-	return template ('success_mail.tpl', dUserInfo=dUserInfo, lState1, lState2, lState3 )
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, lState1=lState1, lState2=lState2, lState3=lState3 )
 
 me = 'tequila@whenisdryday.in'
 
@@ -96,10 +96,10 @@ def fNewUserData(lHtmlFields, sWUser):
 	Extract user entered fields from lHtmlFields. Call validate function
 	before saving it to the db. Table schema for the user table is -
 	 
-	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), 
+	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), \
 	state3 char(30), verified integer, primary key (email, state1) )
 	
-	CREATE TABLE dw_user_live (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), 
+	CREATE TABLE dw_user_live (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), \
 	state3 char(30), verified integer, primary key (email, state1) )
 	
 	"""
@@ -112,7 +112,7 @@ def fNewUserData(lHtmlFields, sWUser):
 	gDBConn = con.cursor()
 	
 #	Insert into live table
-	gDBConn.execute("insert into "+sWUser_live+" (first_name,last_name,email,state1,state2,state3) \
+	gDBConn.execute("insert into "+sWUserLive+" (first_name,last_name,email,state1,state2,state3) \
 		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], \
 		dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
 #	Insert into mother table
