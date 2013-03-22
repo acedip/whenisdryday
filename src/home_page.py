@@ -14,6 +14,7 @@
 #	GNU General Public License for more details http://www.gnu.org/licenses
 
 import sqlite3
+import datetime
 from bottle import route, run, debug, template, request
 from email.mime.text import MIMEText
 
@@ -58,14 +59,9 @@ def fSuccessMail(dUserInfo):
 	Returns all dry days in that state
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state1']+"'")
-	tState1 = gDBConn.fetchall()
-	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state2']+"'")
-	tState2 = gDBConn.fetchall()
-	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state3']+"'")
-	tState3 = gDBConn.fetchall()	
-	
-	return template ('success_mail.tpl', dUserInfo=dUserInfo, state1=tState1, state2=tState2, state3=tState3 )
+	gDBConn.execute("select * from "+sWDryDay+" where state in (?,?,?)",(dUserInfo['state1'],dUserInfo['state2'],dUserInfo['state3']))
+	tState = gDBConn.fetchall()		
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, tstate=tState)
 
 me = 'tequila@whenisdryday.in'
 
@@ -84,7 +80,9 @@ def fSendMail(me,dUserInfo):
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
-	f=open('./mail.html','w')
+	vMailTS = datetime.datetime.now()
+	fMail = './confirm_mail_archives/'+dUserInfo['email']+'_TimeStamp_'+str(vMailTS)+'.html'
+	f=open(fMail,'w')
 	print >> f, msg.as_string()
 	f.close()
 	return 1

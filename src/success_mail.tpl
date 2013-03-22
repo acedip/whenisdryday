@@ -243,8 +243,8 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                             </td>
                                         </tr>
                                         <tr> 
-                                        	<!-- State one dry days -->
-                                        	%for row in state1: 
+                                        	<!-- State ALL dry days -->
+                                        	%for row in tstate: 
                                         		<tr>
                                         			%for col in row:
                                         				<td>{{col}}</td>
@@ -252,23 +252,6 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                         		</tr>
                                         	%end
                                         	
-                                        	<!-- State two dry days -->
-                                            %for row in state2: 
-                                        		<tr>
-                                        			%for col in row:
-                                        				<td>{{col}}</td>
-                                        			%end
-                                        		</tr>
-                                        	%end
-                                        	
-                                        	<!-- State three dry days -->
-                                            %for row in state3: 
-                                        		<tr>
-                                        			%for col in row:
-                                        				<td>{{col}}</td>
-                                        			%end
-                                        		</tr>
-                                        	%end
                                             <tr>
                                             
                                                 <td class="w280" width="280" height="50" border="1"></td>
