@@ -66,7 +66,7 @@ def fSuccessMail(dUserInfo):
 	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state3']+"'")
 	lState3 = gDBConn.fetchall()	
 	
-	return template ('success_mail.tpl', dUserInfo=dUserInfo, lState1=lState1, lState2=lState2, lState3=lState3 )
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, state1=lState1, state2=lState2, state3=lState3 )
 
 me = 'tequila@whenisdryday.in'
 
@@ -110,11 +110,9 @@ def fNewUserData(lHtmlFields, sWUser):
 	gDBConn = con.cursor()
 	
 #	Insert into live table
-	gDBConn.execute("insert into "+sWUserLive+" (first_name,last_name,email,state1,state2,state3) \
-		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+	gDBConn.execute("insert into "+sWUserLive+" (first_name,last_name,email,state1,state2,state3,verified) values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
 #	Insert into mother table
-	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state1,state2,state3) \
-		values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state1,state2,state3,verified) values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
 		
 	con.commit()
 	gDBConn.close()
@@ -133,6 +131,44 @@ def new_user():
 	else:
 		return template('new_user.tpl')
 
+@route('/confirm/:email', method='GET')
+def confirm_user(email):
+	gDBConn = con.cursor()
+	gDBConn.execute("UPDATE "+sWUserLive+" SET verified = ? WHERE email = ?",(1,email))
+	con.commit()
+	gDBConn.close()
+	return template('<b> emailid {{email}} successully verified </b>',email=email)
+
+@route('/unsubscribe/:email', method='GET')
+def unsubscribe_user(email):
+	if request.GET.get('save','').strip():	
+		gDBConn = con.cursor()
+		email
+		gDBConn.execute("DELETE FROM "+sWUserLive+" WHERE email = ?",(email))
+		con.commit()
+		gDBConn.close()
+		return template('<b> emailid {{emailid}} successully UN-SUBSCRIBED - GO DIE!! </b>',emailid=email)
+	else:
+		return template ('unsubscribe.tpl',emailid=email)
+
+@route('/update/:email', method='GET')
+def update_user(email):
+	if request.GET.get('save','').strip():	
+		dUserInfo= {}
+		lHtmlFields= ['state1', 'state2', 'state3']
+		for sEntry in lHtmlFields:
+			dUserInfo[sEntry]= request.GET.get(sEntry).strip()
+		gDBConn = con.cursor()
+		gDBConn.execute("UPDATE "+sWUserLive+" SET state1 = ? state2 = ? state3 = ? WHERE email=?",dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'],email )
+		con.commit()
+		gDBConn.close()
+		return template('<b> emailid {{emailid}} successully UPDATED - GO FUCK!! </b>',emailid=email)
+	else:
+		gDBConn = con.cursor()
+		gDBConn.execute("SELECT state1,state2,state3 FROM "+sWUserLive+" WHERE email = ?",(email))
+		lState = gDBConn.fetchall()
+		gDBConn.close()
+		return template ('update.tpl',UserState=lState,emailid=email)
 
 # Push all state and dry days to js in the file.
 # js to store it for faster rendering

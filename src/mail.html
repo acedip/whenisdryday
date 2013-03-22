@@ -1,3 +1,10 @@
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Subscription to whenisdryday.in successful
+From: tequila@whenisdryday.in
+To: update@up2
+
 <html><head><style type="text/css">
 /* Mobile-specific Styles */
 @media only screen and (max-device-width: 480px) { 
@@ -190,13 +197,13 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                         <table class="w580" width="580" cellpadding="0" cellspacing="0" border="0">
                             <tbody><tr>
                                 <td class="w580" width="580">
-                                    <p align="left" class="article-title"><singleline label="Title">Hi {{dUserInfo['first_name']}} {{dUserInfo['last_name']}}<br>Yay! Successful sign up. Cheers.</singleline></p>
+                                    <p align="left" class="article-title"><singleline label="Title">Hi ed le<br>Yay! Successful sign up. Cheers.</singleline></p>
                                     
-                                    <a href="http://localhost:8080/confirm/{{dUserInfo['email']}}">click to confirm subscription </a>
+                                    <a href="http://localhost:8080/confirm/update@up2">click to confirm subscription </a>
                                     <br>
-                                    <a href="http://localhost:8080/unsubscribe/{{dUserInfo['email']}}">Bored : Un-Subscribe </a>
+                                    <a href="http://localhost:8080/unsubscribe/update@up2">Bored : Un-Subscribe </a>
                                     <br>
-                                    <a href="http://localhost:8080/update/{{dUserInfo['email']}}">Wrong : Update Subsription </a>
+                                    <a href="http://localhost:8080/update/update@up2">Wrong : Update Subsription </a>
                                     
                                     <div align="left" class="article-content">
                                         <multiline label="Description">You will get an email like this before every dry day in your state.<br><br>Here are the dry days in your state</multiline>
@@ -244,31 +251,10 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                         </tr>
                                         <tr> 
                                         	<!-- State one dry days -->
-                                        	%for row in state1: 
-                                        		<tr>
-                                        			%for col in row:
-                                        				<td>{{col}}</td>
-                                        			%end
-                                        		</tr>
-                                        	%end
                                         	
                                         	<!-- State two dry days -->
-                                            %for row in state2: 
-                                        		<tr>
-                                        			%for col in row:
-                                        				<td>{{col}}</td>
-                                        			%end
-                                        		</tr>
-                                        	%end
                                         	
                                         	<!-- State three dry days -->
-                                            %for row in state3: 
-                                        		<tr>
-                                        			%for col in row:
-                                        				<td>{{col}}</td>
-                                        			%end
-                                        		</tr>
-                                        	%end
                                             <tr>
                                             
                                                 <td class="w280" width="280" height="50" border="1"></td>
@@ -344,3 +330,4 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
 </table><img src="https://createsend1.com/t/t-o-l-l/o.gif" style="height:1px !important; width:1px !important; border: 0 !important; margin: 0 !important; padding: 0 !important" width="1" height="1" border="0">
 </body>
 </html>
+
