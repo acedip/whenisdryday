@@ -47,7 +47,6 @@ def fValidateUser(dUserInfo):
 	gDBConn = con.cursor()
 	gDBConn.execute("select email from "+sWUserLive+" where email = '"+dUserInfo['email']+"'")
 	vUserExist = gDBConn.fetchall()
-	#print vUserExist
 	if len(vUserExist)>0:
 		return 0
 	else:
@@ -60,13 +59,13 @@ def fSuccessMail(dUserInfo):
 	"""
 	gDBConn = con.cursor()
 	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state1']+"'")
-	lState1 = gDBConn.fetchall()
+	tState1 = gDBConn.fetchall()
 	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state2']+"'")
-	lState2 = gDBConn.fetchall()
+	tState2 = gDBConn.fetchall()
 	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state3']+"'")
-	lState3 = gDBConn.fetchall()	
+	tState3 = gDBConn.fetchall()	
 	
-	return template ('success_mail.tpl', dUserInfo=dUserInfo, state1=lState1, state2=lState2, state3=lState3 )
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, state1=tState1, state2=tState2, state3=tState3 )
 
 me = 'tequila@whenisdryday.in'
 
@@ -173,8 +172,9 @@ def update_user(email):
 				lState.append(col)
 		return template ('update.tpl',lState=lState,email=email)
 
-# Push all state and dry days to js in the file.
-# js to store it for faster rendering
+#@route('/alldryday', method='GET')
+#def alldryday():
+	
 
 debug(True) #not in production. same for reloader=True
 
