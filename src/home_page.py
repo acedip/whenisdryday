@@ -14,14 +14,16 @@
 #	GNU General Public License for more details http://www.gnu.org/licenses
 
 import sqlite3
+import datetime
 from bottle import route, run, debug, template, request
 from email.mime.text import MIMEText
 
 # DB Connection
 con = sqlite3.connect('./db/sample.db')
 # Table Name
-sWUser = 'userdb1' #dw_user
-sWDryDay = 'dryday' #dw_dryday
+sWUser = 'dw_user'
+sWUserLive = 'dw_user_live'
+sWDryDay = 'dw_dryday'
 
 '''
 import smtplib
@@ -44,9 +46,8 @@ def fValidateUser(dUserInfo):
 	If False, user allowed to sign up
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select email from "+sWUser+" where email = '"+dUserInfo['email']+"'")
+	gDBConn.execute("select email from "+sWUserLive+" where email = '"+dUserInfo['email']+"'")
 	vUserExist = gDBConn.fetchall()
-	#print vUserExist
 	if len(vUserExist)>0:
 		return 0
 	else:
@@ -58,9 +59,9 @@ def fSuccessMail(dUserInfo):
 	Returns all dry days in that state
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select * from "+sWDryDay+" where state = '"+dUserInfo['state']+"'")
-	lStatedryday = gDBConn.fetchall()
-	return template ('success_mail.tpl', dUserInfo=dUserInfo, htmldryday=lStatedryday )
+	gDBConn.execute("select * from "+sWDryDay+" where state in (?,?,?)",(dUserInfo['state1'],dUserInfo['state2'],dUserInfo['state3']))
+	tState = gDBConn.fetchall()		
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, tstate=tState)
 
 me = 'tequila@whenisdryday.in'
 
@@ -79,20 +80,23 @@ def fSendMail(me,dUserInfo):
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
-	f=open('./mail.html','w')
+	vMailTS = datetime.datetime.now()
+	fMail = './confirm_mail_archives/'+dUserInfo['email']+'_TimeStamp_'+str(vMailTS)+'.html'
+	f=open(fMail,'w')
 	print >> f, msg.as_string()
-#	f = write('email.html','w')
 	f.close()
-#	print >> 'Email Success :', f
 	return 1
-
 
 def fNewUserData(lHtmlFields, sWUser):
 	"""
 	Parse user inputs and put save it in db. retrun user entered fields.
 	Extract user entered fields from lHtmlFields. Call validate function
-	before saving it to the db. Table schema for the user table is - 
-	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), pri_state char(30) , sec_state char(30), primary key (email, pri_state) )
+	before saving it to the db. Table schema for the user table is -
+	 
+	CREATE TABLE dw_user (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), state3 char(30), verified integer, primary key (email, state1) )
+	
+	CREATE TABLE dw_user_live (first_name char(30), last_name char(30) ,email varchar(50), state1 char(30) , state2 char(30), state3 char(30), verified integer, primary key (email, state1) )
+	
 	"""
 	dUserInfo= {}
 	for sEntry in lHtmlFields:
@@ -101,19 +105,21 @@ def fNewUserData(lHtmlFields, sWUser):
 		dUserInfo['first_name']="User Exists"
 		return dUserInfo
 	gDBConn = con.cursor()
-	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state) \
-		values (?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state']))
+	
+#	Insert into live table
+	gDBConn.execute("insert into "+sWUserLive+" (first_name,last_name,email,state1,state2,state3,verified) values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+#	Insert into mother table
+	gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state1,state2,state3,verified) values (?,?,?,?,?,?,?)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'], dUserInfo['verified']))
+		
 	con.commit()
 	gDBConn.close()
 	fSendMail(me,dUserInfo)
 	return dUserInfo
 
-print "before /new" 
-
 @route('/new', method='GET')
 def new_user():
 	if request.GET.get('save','').strip():
-		lHtmlFields= ['first_name', 'last_name', 'email', 'state']
+		lHtmlFields= ['first_name', 'last_name', 'email', 'state1', 'state2', 'state3','verified']
 		dUserInfo = fNewUserData(lHtmlFields, sWUser)
 		if (dUserInfo['first_name'] == "User Exists"):
 			return template('userexists.tpl')
@@ -122,43 +128,51 @@ def new_user():
 	else:
 		return template('new_user.tpl')
 
-print "after /new" 
+@route('/confirm/:email', method='GET')
+def confirm_user(email):
+	gDBConn = con.cursor()
+	gDBConn.execute("UPDATE "+sWUserLive+" SET verified = ? WHERE email = ?",(1,email))
+	con.commit()
+	gDBConn.close()
+	return template('<b> emailid {{email}} successully verified </b>',email=email)
 
-def fAllDryDays():
-	"""
-	list all dry days of all state.
-	Implimentation missing. AJAX implimentation expected
-	Table schema for the dryday table
-	CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
+@route('/unsubscribe/:email', method='GET')
+def unsubscribe_user(email):
+	if request.GET.get('save','').strip():	
+		gDBConn = con.cursor()
+		gDBConn.execute("DELETE FROM "+sWUserLive+" WHERE email = ?",(email,))
+		con.commit()
+		gDBConn.close()
+		return template('<b> emailid {{emailid}} successully UN-SUBSCRIBED - GO DIE!! </b>',emailid=email)
+	else:
+		return template ('unsubscribe.tpl',emailid=email)
+
+@route('/update/:email', method='GET')
+def update_user(email):
+	if request.GET.get('save','').strip():	
+		dUserUpdateInfo= {}
+		lHtmlFields= ['state1', 'state2', 'state3']
+		for sEntry in lHtmlFields:
+			dUserUpdateInfo[sEntry]= request.GET.get(sEntry).strip()
+		gDBConn = con.cursor()
+		gDBConn.execute("UPDATE "+sWUserLive+" SET state1 = ?, state2 = ?, state3 = ? WHERE email=?",(dUserUpdateInfo['state1'], dUserUpdateInfo['state2'], dUserUpdateInfo['state3'],email ))
+		con.commit()
+		gDBConn.close()
+		return template('<b> emailid {{emailid}} successully UPDATED - YUPPY !! </b>',emailid=email)
+	else:
+		gDBConn = con.cursor()
+		gDBConn.execute("SELECT state1,state2,state3 FROM "+sWUserLive+" WHERE email = ?",(email,))
+		dbresult = gDBConn.fetchall()
+		gDBConn.close()
+		lState = []
+		for row in dbresult:
+			for col in row:
+				lState.append(col)
+		return template ('update.tpl',lState=lState,email=email)
+
+#@route('/alldryday', method='GET')
+#def alldryday():
 	
-	"""
-	gDBConn.execute("select * from "+sWDryDay+"")
-	vAllDays = gDBConn.fetchall()
-	return dict(vAllDays)
-
-# Push all state and dry days to js in the file.
-# js to store it for faster rendering
-"""@route('/alldrydays', method='GET')
-def list_all_drydays():
-	vAllDryDays = fAllDryDays()
-	return template('listalldryday.tpl')
-"""
-
-# Temporary function. The main email function to store default details which will be used in email functions across.
-# fMainEmail -> fSuccessEmail 
-# fMainEmail -> fDryDayEmail 
-def fMainEmail (dUserInfo):
-		sender='mail@whenisdryday.in'
-		message = """From: Dry Day <tequila@whenisdryday.in>
-		To: %s <%s>
-		Subject: Tomorrow is dry day
-		This is a test e-mail message.
-		LETS HAVE A TEQUILA
-		"this is the image location %s
-		Tomorrow is a dry day in %s
-		""" %(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state'])
-		s.sendmail(sender, email, message)
-		print "Successfully sent email"
 
 debug(True) #not in production. same for reloader=True
 

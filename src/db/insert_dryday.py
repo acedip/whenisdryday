@@ -19,8 +19,9 @@ from bottle import route, run, debug, template, request
 # DB Connection
 con = sqlite3.connect('sample.db')
 # Table Name
-sWUser = 'userdb1' #dw_user
-sWDryDay = 'dryday' #dw_dryday
+sWUser = 'dw_user'
+sWUserLive = 'dw_user_live'
+sWDryDay = 'dw_dryday'
 
 @route('/insertdryday', method='GET')
 def insert_dry_days():
@@ -30,7 +31,7 @@ def insert_dry_days():
 		new_state = request.GET.get('state').strip()
 	
 #		Table schema
-#		CREATE TABLE dryday (drydate integer, state char(30) , primary key(drydate,state) )
+#		CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
 		gDBConn = con.cursor()
 		gDBConn.execute("insert into "+sWDryDay+" (drydate,state) values (?,?)",(new_drydate, new_state))
 		con.commit()
@@ -47,10 +48,18 @@ def list_all_drydays():
 	gDBConn.close()
 	return template('make_table',rows=result)
 
-@route('/listuser')
+@route('/listmother')
 def list_all_users():
 	gDBConn = con.cursor()
 	gDBConn.execute("select * from "+sWUser+"")
+	result = gDBConn.fetchall()
+	gDBConn.close()
+	return template('make_table',rows=result)
+
+@route('/listlive')
+def list_all_users():
+	gDBConn = con.cursor()
+	gDBConn.execute("select * from "+sWUserLive+"")
 	result = gDBConn.fetchall()
 	gDBConn.close()
 	return template('make_table',rows=result)

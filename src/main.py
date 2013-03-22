@@ -14,44 +14,86 @@
 #	GNU General Public License for more details http://www.gnu.org/licenses
 
 import sqlite3
+import datetime
 from bottle import route, run, debug, template, request
-import smtplib
+from email.mime.text import MIMEText
 
-con = sqlite3.connect('sample.db')
-c = con.cursor()
+# DB Connection
+con = sqlite3.connect('./db/sample.db')
+# sqlite3 unicode to string conversion
+con.text_factory = str
+# Table Name
+sWUser = 'dw_user'
+sWUserLive = 'dw_user_live'
+sWDryDay = 'dw_dryday'
+
+'''
+import smtplib
+# SES | Mail connection
+#s = smtplib.SMTP("email-smtp.us-east-1.amazonaws.com")
+s = smtplib.SMTP("ses-smtp-prod-335357831.us-east-1.elb.amazonaws.com")
+s.starttls()
+from ses_cred import ses_cred as ses
+user_name = ses.cred['user']
+user_pswd = ses.cred['pswd']
+s.login(user_name,user_pswd)
+'''
 
 def check_dryday():
-	c.execute("SELECT a.first_name,a.email,a.state \
-	FROM userdb1 AS a \
-	INNER JOIN dryday AS b \
-		ON a.state=b.state \
-	WHERE  drydate=date('now','+1 day')"\
+	gDBConn = con.cursor()
+	gDBConn.execute("SELECT a.first_name, a.last_name, a.email, a.state1, a.state2, a.state3 \
+	FROM "+sWUserLive+" AS a \
+	INNER JOIN "+sWDryDay+" AS b \
+		ON a.state1=b.state \
+	WHERE  b.drydate=date('now','+1 day')\
+	AND a.verified=1"
 	)
-	result = c.fetchall()
-	c.close()
-	return tuple (result)
+	tUserData = gDBConn.fetchall()
+	gDBConn.close()
+	return tuple (tUserData)
 
-def users_dryday(args):
-	for rows in args:
-		print (rows)
-		sender='anirudh@whenisdryday' #irrelevant 
-		fname=rows[0] #first name
-		email=rows[1] 
-		state=rows[2] 
-		# Test mail. The loop fails here as the mail service fails.
-		message = """From: From Person <from@fromdomain.com>
-		To: To Person <to@todomain.com>
-		Subject: Tomorrow is dry day
-		
-		Hi %s
-		This is a test e-mail message.
-		Tomorrow is a dry day in %s
-		""" %(fname,state)
+def fSuccessMail(dUserInfo):
+	"""
+	function argument = state of the successful user
+	Returns all dry days in that state
+	"""
+	gDBConn = con.cursor()
+	gDBConn.execute("select * from "+sWDryDay+" where state in (?,?,?)",(dUserInfo['state1'],dUserInfo['state2'],dUserInfo['state3']))
+	tState = gDBConn.fetchall()		
+	return template ('success_mail.tpl', dUserInfo=dUserInfo, tstate=tState)
 
-		smtpObj = smtplib.SMTP('localhost')
-		smtpObj.sendmail(sender, email, message)
-		print "Successfully sent email"
+me = 'tequila@whenisdryday.in'
 
-users_dryday(check_dryday())
+def fSendMail(me,tUserData):
+	"""
+	Email Sending
+	fSuccessEmail called and fed into the MIME Text as msg
+	msg is a list. with values like sender, subject etc
+	Returns success if email sent
+	"""
+	
+	lUserFields= ['first_name', 'last_name', 'email', 'state1', 'state2', 'state3']	
+	for row in tUserData:
+		dUserInfo = dict(zip(lUserFields,row))
+		msg = MIMEText(fSuccessMail(dUserInfo))
+		msg['Subject'] = 'Subscription to whenisdryday.in successful'
+		msg['From'] = me
+		msg['To'] = dUserInfo['email']
+		you = dUserInfo['email']
+		# Commenting sending as it wouldn't work right now
+		#gMail.sendmail(me, you, msg.as_string())
+		print "message successully sent"
+		vMailTS = datetime.datetime.now()
+		fMail = './sent_mail_archives/'+dUserInfo['email']+'_TimeStamp_'+str(vMailTS)+'.html'
+		f=open(fMail,'w')
+		print >> f, msg.as_string()
+		f.close()
+	return 1
+
+tUserData = check_dryday()
+
+print tUserData
+
+fSendMail(me,tUserData)
 
 

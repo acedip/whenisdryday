@@ -1,3 +1,10 @@
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Subscription to whenisdryday.in successful
+From: tequila@whenisdryday.in
+To: finaltest@gmail.com
+
 <html><head><style type="text/css">
 /* Mobile-specific Styles */
 @media only screen and (max-device-width: 480px) { 
@@ -190,13 +197,13 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                         <table class="w580" width="580" cellpadding="0" cellspacing="0" border="0">
                             <tbody><tr>
                                 <td class="w580" width="580">
-                                    <p align="left" class="article-title"><singleline label="Title">Hi {{dUserInfo['first_name']}} {{dUserInfo['last_name']}}<br>Yay! Successful sign up. Cheers.</singleline></p>
+                                    <p align="left" class="article-title"><singleline label="Title">Hi final finale<br>Yay! Successful sign up. Cheers.</singleline></p>
                                     
-                                    <a href="http://localhost:8080/confirm/{{dUserInfo['email']}}">click to confirm subscription </a>
+                                    <a href="http://localhost:8080/confirm/finaltest@gmail.com">click to confirm subscription </a>
                                     <br>
-                                    <a href="http://localhost:8080/unsubscribe/{{dUserInfo['email']}}">Bored : Un-Subscribe </a>
+                                    <a href="http://localhost:8080/unsubscribe/finaltest@gmail.com">Bored : Un-Subscribe </a>
                                     <br>
-                                    <a href="http://localhost:8080/update/{{dUserInfo['email']}}">Wrong : Update Subsription </a>
+                                    <a href="http://localhost:8080/update/finaltest@gmail.com">Wrong : Update Subsription </a>
                                     
                                     <div align="left" class="article-content">
                                         <multiline label="Description">You will get an email like this before every dry day in your state.<br><br>Here are the dry days in your state</multiline>
@@ -243,15 +250,51 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
                                             </td>
                                         </tr>
                                         <tr> 
-                                        	<!-- State ALL dry days -->
-                                        	%for row in tstate: 
-                                        		<tr>
-                                        			%for col in row:
-                                        				<td>{{col}}</td>
-                                        			%end
-                                        		</tr>
-                                        	%end
+                                        	<!-- State one dry days -->
                                         	
+                                        	<!-- State two dry days -->
+                                        		<tr>
+                                        				<td>2013-03-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-04-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-05-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-06-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-07-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-08-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-09-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-10-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-11-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        		<tr>
+                                        				<td>2013-12-01</td>
+                                        				<td>kerela</td>
+                                        		</tr>
+                                        	
+                                        	<!-- State three dry days -->
                                             <tr>
                                             
                                                 <td class="w280" width="280" height="50" border="1"></td>
@@ -327,3 +370,4 @@ body, td { font-family: 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif; 
 </table><img src="https://createsend1.com/t/t-o-l-l/o.gif" style="height:1px !important; width:1px !important; border: 0 !important; margin: 0 !important; padding: 0 !important" width="1" height="1" border="0">
 </body>
 </html>
+
