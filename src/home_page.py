@@ -143,8 +143,7 @@ def confirm_user(email):
 def unsubscribe_user(email):
 	if request.GET.get('save','').strip():	
 		gDBConn = con.cursor()
-		email
-		gDBConn.execute("DELETE FROM "+sWUserLive+" WHERE email = ?",(email))
+		gDBConn.execute("DELETE FROM "+sWUserLive+" WHERE email = ?",(email,))
 		con.commit()
 		gDBConn.close()
 		return template('<b> emailid {{emailid}} successully UN-SUBSCRIBED - GO DIE!! </b>',emailid=email)
@@ -154,21 +153,25 @@ def unsubscribe_user(email):
 @route('/update/:email', method='GET')
 def update_user(email):
 	if request.GET.get('save','').strip():	
-		dUserInfo= {}
+		dUserUpdateInfo= {}
 		lHtmlFields= ['state1', 'state2', 'state3']
 		for sEntry in lHtmlFields:
-			dUserInfo[sEntry]= request.GET.get(sEntry).strip()
+			dUserUpdateInfo[sEntry]= request.GET.get(sEntry).strip()
 		gDBConn = con.cursor()
-		gDBConn.execute("UPDATE "+sWUserLive+" SET state1 = ? state2 = ? state3 = ? WHERE email=?",dUserInfo['state1'], dUserInfo['state2'], dUserInfo['state3'],email )
+		gDBConn.execute("UPDATE "+sWUserLive+" SET state1 = ?, state2 = ?, state3 = ? WHERE email=?",(dUserUpdateInfo['state1'], dUserUpdateInfo['state2'], dUserUpdateInfo['state3'],email ))
 		con.commit()
 		gDBConn.close()
-		return template('<b> emailid {{emailid}} successully UPDATED - GO FUCK!! </b>',emailid=email)
+		return template('<b> emailid {{emailid}} successully UPDATED - YUPPY !! </b>',emailid=email)
 	else:
 		gDBConn = con.cursor()
-		gDBConn.execute("SELECT state1,state2,state3 FROM "+sWUserLive+" WHERE email = ?",(email))
-		lState = gDBConn.fetchall()
+		gDBConn.execute("SELECT state1,state2,state3 FROM "+sWUserLive+" WHERE email = ?",(email,))
+		dbresult = gDBConn.fetchall()
 		gDBConn.close()
-		return template ('update.tpl',UserState=lState,emailid=email)
+		lState = []
+		for row in dbresult:
+			for col in row:
+				lState.append(col)
+		return template ('update.tpl',lState=lState,email=email)
 
 # Push all state and dry days to js in the file.
 # js to store it for faster rendering
