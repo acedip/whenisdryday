@@ -45,6 +45,8 @@ def check_dryday():
 	FROM "+sWUserLive+" AS a \
 	INNER JOIN "+sWDryDay+" AS b \
 		ON a.state1=b.state \
+			OR a.state2=b.state \
+			OR a.state3=b.state \
 	WHERE  b.drydate=date('now','+1 day')\
 	AND a.verified=1"
 	)
@@ -59,8 +61,20 @@ def fSuccessMail(dUserInfo):
 	"""
 	gDBConn = con.cursor()
 	gDBConn.execute("select * from "+sWDryDay+" where state in (?,?,?)",(dUserInfo['state1'],dUserInfo['state2'],dUserInfo['state3']))
-	tState = gDBConn.fetchall()		
-	return template ('success_mail.tpl', dUserInfo=dUserInfo, tstate=tState)
+	tState = gDBConn.fetchall()	
+	#Tomorrow Dry Day
+	gDBConn.execute("SELECT * FROM ( \
+	SELECT a.state1 FROM "+sWUserLive+" AS a INNER JOIN "+sWDryDay+" AS b ON a.state1=b.state WHERE  email = '"+dUserInfo['email']+"' AND b.drydate=date('now','+1 day') \
+	UNION \
+	SELECT a.state2 FROM "+sWUserLive+" AS a INNER JOIN "+sWDryDay+" AS b ON a.state2=b.state WHERE  email = '"+dUserInfo['email']+"' AND b.drydate=date('now','+1 day')  \
+	UNION \
+	SELECT a.state3 FROM "+sWUserLive+" AS a INNER JOIN "+sWDryDay+" AS b ON a.state3=b.state WHERE  email = '"+dUserInfo['email']+"' AND b.drydate=date('now','+1 day') ) ")
+	
+	result = tuple ( gDBConn.fetchall() )
+
+	gDBConn.close()
+
+	return template ('dryday_mail.tpl', dUserInfo=dUserInfo, tstate=tState,tResult=result)
 
 me = 'tequila@whenisdryday.in'
 
@@ -75,6 +89,7 @@ def fSendMail(me,tUserData):
 	lUserFields= ['first_name', 'last_name', 'email', 'state1', 'state2', 'state3']	
 	for row in tUserData:
 		dUserInfo = dict(zip(lUserFields,row))
+		print dUserInfo
 		msg = MIMEText(fSuccessMail(dUserInfo))
 		msg['Subject'] = 'Subscription to whenisdryday.in successful'
 		msg['From'] = me
