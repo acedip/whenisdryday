@@ -9,30 +9,8 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-        background-color: transparent;
-      }
-
-      html {
-          /*background: #ffffcc url("img/doolally.png") no-repeat center center fixed;*/
-          background: #f1e3b2 url("480_home_page_final_2.png") no-repeat top fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: 100% 100%;
-      }
-
-    </style>
+    <link href="css/main.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
-
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
@@ -41,7 +19,7 @@
     <link rel="shortcut icon" href="ico/favicon.png">
   </head>
 
-  <body>
+  <body class="otherbackground">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -54,75 +32,30 @@
           <!--<a class="brand" href="#">whenisdryday</a>-->
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="C:\Users\ashekhawat\Documents\GitHub\whenisdryday\bootstrap\index_2.html">Home</a></li>
-              <li class="active"><a href="C:\Users\ashekhawat\Documents\GitHub\whenisdryday\bootstrap\">About</a></li>
-              <li><a href="C:\Users\ashekhawat\Documents\GitHub\whenisdryday\bootstrap">Wet Days</a></li>
-              <li><a href="C:\Users\ashekhawat\Documents\GitHub\whenisdryday\bootstrap">All Dry Days</a></li>
-              <li><a href="C:\Users\ashekhawat\Documents\GitHub\whenisdryday\bootstrap">+Code</a></li>
+              <li><a href="#active">Home</a></li>
+              <li class="active"><a href="#About">About Us</a></li>
+              <li><a href="#contact">Wet Days</a></li>
+              <li><a href="#contact">All Dry Days</a></li>
+              <li><a href="http://github.com/acedip/whenisdryday">+Code</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span3 offset7">
-          <h2>When is Dry Day</h2>
-          <hr>
-          <div>
-          <form action="/new" method="GET">
-            <p>
-              <input type="text" id="firtname" class="input-small" name="first_name" placeholder="First Name" style="width:93px"> 
-              <input type="text" id="lastname" class="input-small" name="last_name" placeholder="Last Name" style="width:94px">
-            <br>
-            <input type="text" name="email" required placeholder="Email Address">
-            <br>
-              <select name="state" required>
-                <option value="">Select A State</option>
-                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chandigarh">Chandigarh</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-                <option value="Daman and Diu">Daman and Diu</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                <option value="Jharkhand">Jharkhand</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Lakshadeep">Lakshadeep</option>
-                <option value="Madya Pradesh">Madya Pradesh</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Orissa">Orissa</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Tripura">Tripura</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="Uttaranchal">Uttaranchal</option>
-                <option value="West Bengal">West Bengal</option>
-              </select>
-            <!--<a class="btn btn-primary">Say Cheers!!</a></p>-->
-            <br><button type="submit" class="btn btn-primary">Say Cheers!!</button></p>
-          </form>
-        </div>
-        </div>
-      </div>
-    </div> <!-- /container -->
 
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit text-center">
+      <h2>So what is Whenisdryday.in?</h2>
+      <p>A simple email subscription service, away from the hassles of longin or account creation. <br>Just put in your EMail Address and State and we will send you an email a day before the dry day in your state.<br><strong>Why State?</strong>Well, in India every state has different number of dry days<br>For Instance Delhi has over 20 Dry Days in an year, Maharashtra has 9.</p>
+        <p><strong>Why India has Dry Day?</strong> We'd rather refrain from commenting on stupid laws but <a href="http://en.wikipedia.org/wiki/Alcohol_laws_of_India#Dry_Days">Here it is</a> for the spirited ones.
+          <br> The Wiki list of State wise Dry Days is incomplete and incorrect. Check ours instead</p>
+        <br>
+      <p><h2>How it all Happened?</h2>
+        On one fine wintery saturday evening in Banagalore, a group of folks decided to go out and mingle. Eat, drink and whatever kids do these days. <br>They were just about to venture out when suddenly someone amongst the fine gentlemen said "Its Dry Day you fools". <br>And that's it. It was enough to get them started and here you are reading this.
+      </p>
+              
+      </div> <!-- hero class -->
+    
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
