@@ -17,6 +17,8 @@ import sqlite3
 import datetime
 from bottle import route, run, debug, template, request
 from email.mime.text import MIMEText
+from multiprocessing.connection import Client
+import cPickle as pickle
 
 # DB Connection
 con = sqlite3.connect('./db/sample.db')
@@ -24,6 +26,17 @@ con = sqlite3.connect('./db/sample.db')
 sWUser = 'dw_user'
 sWUserLive = 'dw_user_live'
 sWDryDay = 'dw_dryday'
+
+def fPostMailToServer(sMsg):
+	"""
+	The email server is listening on port number 6000.
+	Post the email to the server.
+	Makes the process of sending email non-blocking.
+	"""
+	address = ('localhost',6000)
+	connTCP = Client(address, authkey='drydayiswhen')
+	connTCP.send(pickle.dumps(sMsg))  # pickle ensures that the actual datatype of sMsg doesn't change when it is received on the server
+	connTCP.close()
 
 '''
 import smtplib
@@ -80,11 +93,7 @@ def fSendMail(me,dUserInfo):
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
-	vMailTS = datetime.datetime.now()
-	fMail = './confirm_mail_archives/'+dUserInfo['email']+'_TimeStamp_'+str(vMailTS)+'.html'
-	f=open(fMail,'w')
-	print >> f, msg.as_string()
-	f.close()
+	fPostMailToServer(msg) #Post message as MIMEText
 	return 1
 
 def fNewUserData(lHtmlFields, sWUser):
