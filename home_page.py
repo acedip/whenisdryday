@@ -141,11 +141,9 @@ def new_user():
 	else:
 		return template('index.tpl')
 
-'''
 @route('/bs/:path#.+#',name='bs')
 def db(path):
 	return static_file(path,root='bs')
-'''
 
 @route('/confirm/:email', method='GET')
 def confirm_user(email):
@@ -162,7 +160,7 @@ def unsubscribe_user(email):
 		gDBConn.execute("DELETE FROM "+sWUserLive+" WHERE email = %s",(email,))
 		con.commit()
 		gDBConn.close()
-		return template('<b> emailid {{emailid}} successully UN-SUBSCRIBED - GO DIE!! </b>',emailid=email)
+		return template('unsubscribe_success.tpl')
 	else:
 		return template ('unsubscribe.tpl',emailid=email)
 
@@ -181,12 +179,10 @@ def update_user(email):
 	else:
 		gDBConn = con.cursor()
 		gDBConn.execute("SELECT state FROM "+sWUserLive+" WHERE email = %s",(email,))
-		dbresult = gDBConn.fetchall()
+		dbresult = gDBConn.fetchone()
 		gDBConn.close()
-		lState = []
 		for row in dbresult:
-			for col in row:
-				lState.append(col)
+			lState=row
 		return template ('update.tpl',lState=lState,email=email)
 
 debug(True) #not in production. same for reloader=True

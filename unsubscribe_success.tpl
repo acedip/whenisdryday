@@ -47,12 +47,10 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit text-center">
         <h1>When is dry day</h1>
-        <p>We are really sad to see you go. Would you like to consider once again and not leave us? </p>
+        <p>We are really really sad to inform you that you have left us. Would you like to consider and once again sign up and say Cheers with us like before? </p>
     
-        <form action="/unsubscribe/{{emailid}}" method="GET"> 
-	        <button name="cancel" value="0" onclick="location.href='http://localhost/whenisdryday/mail/daterape.jpg';" class="btn btn-primary btn-large">Yes, Not Going Anywhere</button>
+	        <button name="cancel" value="0" onclick="location.href='http://main.page';" class="btn btn-primary btn-large">Yes, I love Cheers!!</button>
     	    <button name="save" value="1" class="btn btn-warning">No, Screw you!!</button>
-    	</form>
       </div>      
 </div>      
     
