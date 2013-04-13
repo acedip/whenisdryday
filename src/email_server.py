@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 from multiprocessing.connection import Listener
 import cPickle as pickle
 import threading
@@ -16,7 +17,7 @@ def SendEmailThread():
     msg= pickle.loads(msg)
     # We have the Email message over here. Put the code for sending it below
     #vMailTS = datetime.datetime.now()
-    fMail = './mail_archives/'+msg['To']+'.html'
+    fMail = './mail_archives/success_mail/'+msg['To']+'.html'
     f=open(fMail,'w')
     print >> f, msg.as_string()
     f.close()

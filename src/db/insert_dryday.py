@@ -13,11 +13,11 @@
 #	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #	GNU General Public License for more details http://www.gnu.org/licenses
 
-import sqlite3
+import MySQLdb as mdb
 from bottle import route, run, debug, template, request
 
 # DB Connection
-con = sqlite3.connect('sample.db')
+con = mdb.connect('localhost', 'testuser', 'test1', 'testdb')
 # Table Name
 sWUser = 'dw_user'
 sWUserLive = 'dw_user_live'
@@ -33,7 +33,7 @@ def insert_dry_days():
 #		Table schema
 #		CREATE TABLE dw_dryday (drydate integer, state char(30) , primary key(drydate,state) )
 		gDBConn = con.cursor()
-		gDBConn.execute("insert into "+sWDryDay+" (drydate,state) values (?,?)",(new_drydate, new_state))
+		gDBConn.execute("insert into "+sWDryDay+" (state,drydate) values (%s,%s)",(new_state, new_drydate))
 		con.commit()
 		gDBConn.close()
 		return template('insert_dryday.tpl')
