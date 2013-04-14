@@ -15,7 +15,7 @@
 
 import MySQLdb as mdb
 import datetime
-from bottle import route, run, debug, template, request, static_file
+from bottle import route, run, debug, template, request, static_file, error
 from email.mime.text import MIMEText
 from multiprocessing.connection import Client
 import cPickle as pickle
@@ -95,7 +95,8 @@ def fSendMail(me,dUserInfo):
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
-	fPostMailToServer(msg) #Post message as MIMEText
+	#fPostMailToServer(msg) #Post message as MIMEText
+	print t
 	return 1
 
 def fNewUserData(lHtmlFields, sWUser):
@@ -128,6 +129,10 @@ def fNewUserData(lHtmlFields, sWUser):
 	gDBConn.close()
 	fSendMail(me,dUserInfo)
 	return dUserInfo
+
+@error(500)
+def error500(code):
+	return template('success.tpl')
 
 @route('/', method='GET')
 def new_user():
@@ -187,4 +192,4 @@ def update_user(email):
 
 debug(True) #not in production. same for reloader=True
 
-run(host='localhost', port=8080, reloader=True)
+run(host='localhost', port=8081, reloader=True)
