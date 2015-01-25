@@ -3,12 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>When is Dry Day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="when is dry day" content="A simple email subscription service, away from the hassles of longin or account creation">
     <meta name="Anirudh singh shekhawat" content="also known as Acedip">
 
     <!-- Le styles -->
     <link href="./bs/css/bootstrap.css" rel="stylesheet">
-    <link href="./bs/css/main.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color: transparent;
+      }
+      html {
+          background: #ffffcc url("./bs/img/480_home_page_final_2.jpg") no-repeat center bottom fixed;
+          -webkit-background-size: 100% 100%;
+          -moz-background-size: 100% 100%;
+          -o-background-size: 100% 100%;
+          background-size: 100% 100%;
+      }
+      /* For mobile */
+      @media (max-width: 767px) {
+          html {
+			  background-image: url("./bs/img/480_home_page_final_2.jpg");
+          }
+      }
+    </style>
+
     <link href="./bs/css/bootstrap-responsive.css" rel="stylesheet">
     
     <!-- Fav and touch icons -->
@@ -19,7 +40,7 @@
     <link rel="shortcut icon" href="ico/favicon.png">
   </head>
 
-  <body class="otherbackground">
+  <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -33,10 +54,6 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="http://stage.whenisdryday.in">Home</a></li>
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./wetdays.html">Wet Days</a></li>
-              <li><a href="#contact">All Dry Days</a></li>
-              <li><a href="http://github.com/acedip/whenisdryday">+Code</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -46,12 +63,12 @@
  <div class="container">
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit text-center">
-        <h1>When is dry day</h1>
+              <form action="/unsubscribe/{{emailid}}" method="GET"> 
+      			<br>
+			<br>
         <p>We are really sad to see you go. Would you like to consider once again and not leave us? </p>
-    
-        <form action="/unsubscribe/{{emailid}}" method="GET"> 
-	        <button name="cancel" value="0" onclick="location.href='http://localhost/whenisdryday/mail/daterape.jpg';" class="btn btn-primary btn-large">Yes, Not Going Anywhere</button>
-    	    <button name="save" value="1" class="btn btn-warning">No, Screw you!!</button>
+	        <p> <button name="cancel" value="0" onclick="location.href='http://stage.whenisdryday.in/wetdays.html';" class="btn btn-primary btn-large">Yes, Not Going Anywhere</button> </p>
+    	    <p> <button name="save" value="1" class="btn btn-info">No, Screw you!!</button> </p>
     	</form>
       </div>      
 </div>      

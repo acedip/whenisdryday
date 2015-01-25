@@ -15,8 +15,9 @@
 
 import MySQLdb as mdb
 import datetime
-from bottle import route, run, debug, template, request, static_file, error
+from bottle import route, run, debug, template, request, static_file
 from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from multiprocessing.connection import Client
 import cPickle as pickle
 
@@ -70,7 +71,7 @@ def fSuccessMail(dUserInfo):
 	"""
 	function argument = state of the successful user
 	Returns all dry days in that state
-	create table dw_dryday (state varchar(50), drydate date, dryday varchar(30), primary key (state, drydate))
+	create table dw_dryday (state varchar(50), drydate date, dryday varchar(30), primary key (state, drydate));
 	"""
 	gDBConn = con.cursor()
 	
@@ -87,16 +88,17 @@ def fSendMail(me,dUserInfo):
 	msg is a list. with values like sender, subject etc
 	Returns success if email sent
 	"""
-	msg = MIMEText(fSuccessMail(dUserInfo))
+	email_html = MIMEText(fSuccessMail(dUserInfo),'html')
+	msg = MIMEMultipart('alternative')
 	msg['Subject'] = 'Subscription to whenisdryday.in successful'
 	msg['From'] = me
 	msg['To'] = dUserInfo['email']
-	you = dUserInfo['email']
+	#you = dUserInfo['email']
+	msg.attach(email_html)
 	# Commenting sending as it wouldn't work right now
 	#gMail.sendmail(me, you, msg.as_string())
 	print "message successully sent"
-	#fPostMailToServer(msg) #Post message as MIMEText
-	print t
+	fPostMailToServer(msg) #Post message as MIMEText
 	return 1
 
 def fNewUserData(lHtmlFields, sWUser):
@@ -130,10 +132,6 @@ def fNewUserData(lHtmlFields, sWUser):
 	fSendMail(me,dUserInfo)
 	return dUserInfo
 
-@error(500)
-def error500(code):
-	return template('success.tpl')
-
 @route('/', method='GET')
 def new_user():
 	if request.GET.get('save','').strip():
@@ -145,10 +143,6 @@ def new_user():
 			return template('success.tpl')
 	else:
 		return template('index.tpl')
-
-@route('/bs/:path#.+#',name='bs')
-def db(path):
-	return static_file(path,root='bs')
 
 @route('/confirm/:email', method='GET')
 def confirm_user(email):
@@ -180,7 +174,7 @@ def update_user(email):
 		gDBConn.execute("UPDATE "+sWUserLive+" SET state = %s WHERE email=%s",(dUserUpdateInfo['state'],email ))
 		con.commit()
 		gDBConn.close()
-		return template('<b> emailid {{emailid}} successully UPDATED - YUPPY !! </b>',emailid=email)
+		return template('update_success.tpl',lState=dUserUpdateInfo['state'])
 	else:
 		gDBConn = con.cursor()
 		gDBConn.execute("SELECT state FROM "+sWUserLive+" WHERE email = %s",(email,))
@@ -190,6 +184,26 @@ def update_user(email):
 			lState=row
 		return template ('update.tpl',lState=lState,email=email)
 
-debug(True) #not in production. same for reloader=True
+@route('/about.html')
+def about():
+	return template('about.html')
 
-run(host='localhost', port=8081, reloader=True)
+@route('/wetdays.html')
+def about():
+	return template('wetdays.html')
+
+@route('/bs/:path#.+#',name='bs')
+def db(path):
+	return static_file(path,root='bs')
+
+@route('/confirm/bs/:path#.+#',name='bs')
+def db(path):
+	return static_file(path,root='bs')
+
+@route('/update/bs/:path#.+#',name='bs')
+def db(path):
+	return static_file(path,root='bs')
+
+@route('/unsubscribe/bs/:path#.+#',name='bs')
+def db(path):
+	return static_file(path,root='bs')
