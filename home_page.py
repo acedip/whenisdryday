@@ -207,3 +207,7 @@ def db(path):
 @route('/unsubscribe/bs/:path#.+#',name='bs')
 def db(path):
 	return static_file(path,root='bs')
+
+debug(True)
+
+run(host='0.0.0.0',port=80,reloader=True)
