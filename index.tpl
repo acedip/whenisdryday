@@ -60,7 +60,9 @@
             <input type="text" id="firtname" class="input-small" name="first_name" placeholder="Nick Name" style="width:94px">   
             <!-- <input type="text" id="lastname" class="input-small" name="last_name" placeholder="Last Name" style="width:93px"> -->
             <br>
-            <select name="state" required>
+            <input type="text" name="email" required placeholder="Email Address">
+            <br>
+            <select name="state" value="x">
               <option value="">Select A State</option>
               	<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -73,7 +75,7 @@
                 <option value="Daman and Diu">Daman and Diu</option>
                 <option value="Delhi">Delhi</option>
                 <option value="Goa">Goa</option>
-<!--                <option value="Gujarat">Gujarat</option> UNTIL FIGURE OUT THE UX FOR THIS -->
+                <option value="Gujarat">Gujarat</option> 
                 <option value="Haryana">Haryana</option>
                 <option value="Himachal Pradesh">Himachal Pradesh</option>
                 <option value="Jammu and Kashmir">Jammu and Kashmir</option>
@@ -97,8 +99,6 @@
                 <option value="Uttaranchal">Uttaranchal</option>
                 <option value="West Bengal">West Bengal</option>
             </select>
-            <br>
-            <input type="text" name="email" required placeholder="Email Address">
             <input type="hidden" name="verified" value="0">
             <br>
             <button class="btn btn-danger btn-large" type="submit" name="save" value="1">Say Cheers!!</button> 
