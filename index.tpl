@@ -57,8 +57,8 @@
         <div class="span4">
           <form class="text-center" action="/" method="GET">
             <h2 style="margin-bottom:5px">When is Dry Day?</h2>      
-            <input type="text" id="firtname" class="input-small" name="first_name" placeholder="First Name" style="width:94px">   
-            <input type="text" id="lastname" class="input-small" name="last_name" placeholder="Last Name" style="width:93px">
+            <input type="text" id="firtname" class="input-small" name="first_name" placeholder="Nick Name" style="width:94px">   
+            <!-- <input type="text" id="lastname" class="input-small" name="last_name" placeholder="Last Name" style="width:93px"> -->
             <br>
             <select name="state" required>
               <option value="">Select A State</option>
