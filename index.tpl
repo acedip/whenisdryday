@@ -19,6 +19,27 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="ico/favicon.png">
+
+<!-- Le Facebook JS SDK style -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '381968148649899',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
   </head>
 
   <body class="background">
@@ -39,6 +60,14 @@
               <li><a href="./wetdays.html">Wet Days</a></li>
               <li><a href="#contact">All Dry Days</a></li>
               <li><a href="http://github.com/acedip/whenisdryday">+Code</a></li>
+		<li>
+		<div
+		  class="fb-like"
+		  data-share="true"
+		  data-width="450"
+		  data-show-faces="true">
+		</div>
+		</li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
