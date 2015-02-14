@@ -12,10 +12,10 @@
     <link href="./bs/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le Bootstrap Social Buttons and Font Awesome styles -->
-	<link href="./bs/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="./bs/fontawesome/css/font-awesome.css" rel="stylesheet">
-	<link href="./bs/bootstrapsocialbuttons/social-buttons.css" rel="stylesheet">
-	<link href="./bs/bootstrapsocialbuttons/social-buttons.less" rel="stylesheet">
+	<link href="./bs/awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="./bs/awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="./bs/bsb/social-buttons.css" rel="stylesheet">
+	<link href="./bs/bsb/social-buttons.less" rel="stylesheet">
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
@@ -62,7 +62,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '{381968148649899}',
+    appId      : '381968148649899',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
