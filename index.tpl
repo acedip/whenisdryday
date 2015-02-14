@@ -12,10 +12,10 @@
     <link href="./bs/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le Bootstrap Social Buttons and Font Awesome styles -->
-	<link rel="stylesheet" href="./bs/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="./bs/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" href="./bs/bootstrap-social-buttons/social-buttons.css">
-	<link rel="stylesheet" href="./bs/bootstrap-social-buttons/social-buttons.less">
+	<link href="./bs/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="./bs/fontawesome/css/font-awesome.css" rel="stylesheet">
+	<link href="./bs/bootstrapsocialbuttons/social-buttons.css" rel="stylesheet">
+	<link href="./bs/bootstrapsocialbuttons/social-buttons.less" rel="stylesheet">
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
