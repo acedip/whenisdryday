@@ -6,13 +6,17 @@
     <meta name="when is dry day" content="A simple email subscription service, away from the hassles of longin or account creation">
     <meta name="Anirudh singh shekhawat" content="also known as Acedip">
 
-    <!-- Le styles -->
-	<link href="./bs/css/bootstrap.css" rel="stylesheet">
-	
+    <!-- Le Bootstrap styles -->
     <link href="./bs/css/bootstrap.css" rel="stylesheet">
     <link href="./bs/css/main.css" rel="stylesheet">
     <link href="./bs/css/bootstrap-responsive.css" rel="stylesheet">
-    
+
+    <!-- Le Bootstrap Social Buttons and Font Awesome styles -->
+	<link rel="stylesheet" href="./bs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./bs/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="./bs/bootstrap-social-buttons/social-buttons.css">
+	<link rel="stylesheet" href="./bs/bootstrap-social-buttons/social-buttons.less">
+
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
@@ -20,23 +24,88 @@
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="ico/favicon.png">
 
-<!-- Le Facebook JS SDK style -->
+<!-- Le Facebook JS SDK
+================================================== -->
+
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '381968148649899',
-      xfbml      : true,
-      version    : 'v2.2'
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
     });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '{381968148649899}',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.1' // use version 2.1
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
   };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
 </script>
 
 
@@ -60,14 +129,8 @@
               <li><a href="./wetdays.html">Wet Days</a></li>
               <li><a href="#contact">All Dry Days</a></li>
               <li><a href="http://github.com/acedip/whenisdryday">+Code</a></li>
-		<li>
-		<div
-		  class="fb-like"
-		  data-share="true"
-		  data-width="450"
-		  data-show-faces="true">
-		</div>
-		</li>
+              <li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FWhenisdryday&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=381968148649899" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -85,11 +148,23 @@
 
         <div class="span4">
           <form class="text-center" action="/" method="GET">
-            <h2 style="margin-bottom:5px">When is Dry Day?</h2>      
+            <h2 style="margin-bottom:5px">When is Dry Day?</h2>
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+<div id="status">
+</div>
+
+			<p>
+			<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Connect </button>
+			<button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> | Connect </button>
+			<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Connect </button>
+			</p>
+			
             <input type="text" id="firtname" class="input-small" name="first_name" placeholder="Nick Name" style="width:94px">   
             <!-- <input type="text" id="lastname" class="input-small" name="last_name" placeholder="Last Name" style="width:93px"> -->
             <br>
-            <input type="text" name="email" required placeholder="Email Address">
+            <input type="text" name="email"  placeholder="Email Address">
             <br>
             <select name="state" value="x">
               <option value="">Select A State</option>
