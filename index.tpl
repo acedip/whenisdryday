@@ -106,6 +106,24 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+
+function _login() {
+    FB.login(function(response) {
+       // handle the response
+       if(response.status==='connected') {
+        _i();
+       }
+     }, {scope: 'public_profile,email'});
+ }
+
+function _i(){
+     FB.api('/me', function(response) {
+        document.getElementById("firtname").value = response.name;
+        document.getElementById("email").value = response.email;
+	document.getElementById("state").value = response.location;
+    });
+ }
+
 </script>
 
 
@@ -150,13 +168,11 @@
           <form class="text-center" action="/" method="GET">
             <h2 style="margin-bottom:5px">When is Dry Day?</h2>
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
 <div id="status">
 </div>
 
 			<p>
-			<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Connect </button>
+			<button class="btn btn-facebook" onclick="_login();" type="submit"><i class="fa fa-facebook"></i> | Connect </button>
 			<button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> | Connect </button>
 			<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Connect </button>
 			</p>

@@ -210,4 +210,4 @@ def db(path):
 
 debug(True)
 
-run(host='localhost',port=8080,reloader=True)
+run(host='0.0.0.0',port=80,reloader=True)
