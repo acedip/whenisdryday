@@ -24,9 +24,9 @@ import cPickle as pickle
 # DB Connection
 con = mdb.connect('localhost', 'testuser', 'test1', 'testdb')
 # Table Name
-sWUser = 'dw_user'
-sWUserLive = 'dw_user_live'
-sWDryDay = 'dw_dryday'
+sWUser = 'w_user'
+sWUserLive = 'w_user_live'
+sWDryDay = 'w_dryday'
 
 def fPostMailToServer(sMsg):
 	"""
@@ -71,7 +71,7 @@ def fSuccessMail(dUserInfo):
 	"""
 	function argument = state of the successful user
 	Returns all dry days in that state
-	create table dw_dryday (state varchar(50), drydate date, dryday varchar(30), primary key (state, drydate));
+	create table w_dryday (state varchar(50), drydate date, dryday varchar(30), primary key (state, drydate));
 	"""
 	gDBConn = con.cursor()
 	
@@ -107,25 +107,25 @@ def fNewUserData(lHtmlFields, sWUser):
 	Extract user entered fields from lHtmlFields. Call validate function
 	before saving it to the db. Table schema for the user table is -
 	 
-	create table dw_user (first_name char(30), last_name char(30) ,email varchar(50) primary key, state char(30) , verified int);
+	create table w_user (name char(30), last_name char(30) ,email varchar(50) primary key, state char(30) , verified int);
 
-	create table dw_user_live (first_name char(30), last_name char(30) ,email varchar(50) primary key, state char(30) , verified int);
+	create table w_user_live (name char(30), last_name char(30) ,email varchar(50) primary key, state char(30) , verified int);
 	
 	"""
 	dUserInfo= {}
 	for sEntry in lHtmlFields:
 		dUserInfo[sEntry]= request.GET.get(sEntry).strip()
 	if (fValidateUser(dUserInfo,sWUserLive)==0):
-		dUserInfo['first_name']="User Exists"
+		dUserInfo['name']="User Exists"
 		return dUserInfo
 	gDBConn = con.cursor()
 	
 #	Insert into live table
-	gDBConn.execute("insert into "+sWUserLive+" (first_name,last_name,email,state,verified) values (%s,%s,%s,%s,%s)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['verified']))
+	gDBConn.execute("insert into "+sWUserLive+" (name,email,state,verified) values (%s,%s,%s,%s,%s)",(dUserInfo['name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['verified']))
 
 	if (fValidateUser(dUserInfo,sWUser)==1):
 #	Insert into mother table
-		gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state,verified) values (%s,%s,%s,%s,%s)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['verified']))
+		gDBConn.execute("insert into "+sWUser+" (name,email,state,verified) values (%s,%s,%s,%s,%s)",(dUserInfo['name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['verified']))
 		
 	con.commit()
 	gDBConn.close()
@@ -135,9 +135,9 @@ def fNewUserData(lHtmlFields, sWUser):
 @route('/', method='GET')
 def new_user():
 	if request.GET.get('save','').strip():
-		lHtmlFields= ['first_name', 'last_name', 'email', 'state','verified']
+		lHtmlFields= ['name', 'email', 'state','verified']
 		dUserInfo = fNewUserData(lHtmlFields, sWUser)
-		if (dUserInfo['first_name'] == "User Exists"):
+		if (dUserInfo['name'] == "User Exists"):
 			return template('user_exist.tpl')
 		else:
 			return template('success.tpl')

@@ -107,20 +107,20 @@
     });
   }
 
-function _login() {
+function fb_login() {
     FB.login(function(response) {
        // handle the response
        if(response.status==='connected') {
-        _i();
+        fb_i();
        }
-     }, {scope: 'public_profile,email'});
+     }, {scope: 'public_profile,email,location'});
  }
 
-function _i(){
+function fb_i(){
      FB.api('/me', function(response) {
-        document.getElementById("firtname").value = response.name;
+        document.getElementById("name").value = response.name;
         document.getElementById("email").value = response.email;
-	document.getElementById("state").value = response.location;
+	document.getElementById("state").value = response.location.name;
     });
  }
 
@@ -172,13 +172,12 @@ function _i(){
 </div>
 
 			<p>
-			<button class="btn btn-facebook" onclick="_login();" type="submit"><i class="fa fa-facebook"></i> | Connect </button>
+			<button class="btn btn-facebook" onclick="fb_login();" type="submit"><i class="fa fa-facebook"></i> | Connect </button>
 			<button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> | Connect </button>
 			<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Connect </button>
 			</p>
 			
-            <input type="text" id="firtname" class="input-small" name="first_name" placeholder="Nick Name" style="width:94px">   
-            <!-- <input type="text" id="lastname" class="input-small" name="last_name" placeholder="Last Name" style="width:93px"> -->
+            <input type="text" id="name" class="input-small" name="name" placeholder="Nick Name" style="width:94px">   
             <br>
             <input type="text" name="email"  placeholder="Email Address">
             <br>
