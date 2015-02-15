@@ -142,7 +142,7 @@ def new_user():
 		else:
 			return template('success.tpl')
 	else:
-		return template('index.tpl')
+		return template('fb_index.tpl')
 
 @route('/confirm/:email', method='GET')
 def confirm_user(email):
