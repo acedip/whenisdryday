@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="ico/favicon.png">
+    <link rel="shortcut icon" href="bs/favicon.ico">
 
 <!-- Le Facebook JS SDK
 ================================================== -->
@@ -39,6 +39,9 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
+	function Redirect() {
+    		window.location="http://whenisdryday.in/wetdays.html";
+	}
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +

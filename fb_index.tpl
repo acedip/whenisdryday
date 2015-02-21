@@ -69,9 +69,9 @@
 </div>
 
 			<p>
-			<button class="btn btn-facebook" onclick="fb_login();" type="submit"><i class="fa fa-facebook"></i> | Connect </button>
+			<button class="btn btn-facebook" onclick="_login();" type="submit"><i class="fa fa-facebook"></i> | Connect </button>
 			<button class="btn btn-google-plus"><i class="fa fa-google-plus"></i> | Connect </button>
-			<button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Connect </button>
+			<button class="btn btn-twitter" onclick="tw_login():" type="submit"><i class="fa fa-twitter"></i> | Connect </button>
 			</p>
 			
             <input type="text" id="name" class="input-small" name="name" placeholder="Nick Name" style="width:94px">   
@@ -126,6 +126,7 @@
 
 <!-- Le Facebook JS SDK
 ================================================== -->
+<script>
  // Load the SDK asynchronously
   (function(thisdocument, scriptelement, id) {
     var js, fjs = thisdocument.getElementsByTagName(scriptelement)[0];
@@ -182,6 +183,16 @@
 
 </script>
 
+<! -- Le twitter js-->
+<script src=”http://platform.twitter.com/anywhere.js?id=Xsv3CXOENFYj2rXb6zpS4HRWA&v=1″ type=”text/javascript”></script>
+<script>
+// initialize Twitter
+function tw_login() {
+twttr.anywhere(function (T) {
+T.connectButton();
+});
+}
+</script>
     
     <!-- Le javascript
     ================================================== -->
