@@ -46,10 +46,10 @@
  <div class="container">
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit text-center">
-        <h1>When is dry day</h1>
-        <p>We are really really sad to inform you that you have left us. Would you like to consider and once again sign up and say Cheers with us like before? </p>
+        <h1>When is dry day?? </h1>
+        <p>Lets go out drinking... </p>
     
-	        <button name="cancel" value="0" onclick="location.href='http://main.page';" class="btn btn-primary btn-large">Yes, I love Cheers!!</button>
+	        <button name="cancel" value="0" onclick="location.href='http://main.page';" class="btn btn-danger btn-large">Yes, I love Cheers!!</button>
     	    <button name="save" value="1" class="btn btn-warning">No, Screw you!!</button>
       </div>      
 </div>      
@@ -70,5 +70,15 @@
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60498113-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>

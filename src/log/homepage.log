@@ -1,0 +1,1834 @@
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+122.171.116.42 - - [10/May/2015 09:45:03] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /about HTTP/1.1" 200 4597
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:20] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /wetdays HTTP/1.1" 200 4384
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.116.42 - - [10/May/2015 09:45:21] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:22] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:22] "GET /alldrydays HTTP/1.1" 200 24629
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:45:26] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.116.42 - - [10/May/2015 09:45:42] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:45:43] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 09:45:49] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Karnataka&save=1 HTTP/1.1" 200 7018
+122.171.116.42 - - [10/May/2015 09:45:55] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Kerala&save=1 HTTP/1.1" 200 7018
+122.171.116.42 - - [10/May/2015 09:46:00] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Madhya+Pradesh&save=1 HTTP/1.1" 200 4937
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.116.42 - - [10/May/2015 09:46:02] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.116.42 - - [10/May/2015 09:46:03] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 09:46:03] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:37] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/jquery.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-button.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/img/presentation3.jpg HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:38] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /about HTTP/1.1" 200 4597
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:46:41] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:46:42] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:42] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:42] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /alldrydays HTTP/1.1" 200 24629
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:57] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:46:58] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:46:59] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:59] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:46:59] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.161.46.200 - - [10/May/2015 09:47:02] "GET / HTTP/1.1" 200 6950
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/css/main.css HTTP/1.1" 200 1114
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/jquery.js HTTP/1.1" 200 92629
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.161.46.200 - - [10/May/2015 09:47:03] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.161.46.200 - - [10/May/2015 09:47:04] "GET /bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.161.46.200 - - [10/May/2015 09:47:04] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.161.46.200 - - [10/May/2015 09:47:05] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.178.195.49 - - [10/May/2015 09:47:36] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 09:48:00] "GET /alldrydays HTTP/1.1" 200 24629
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:07] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 09:48:08] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:08] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:08] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:08] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:48:08] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:10] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /?name=&email=krpiyushmobile%40gmail.com&phone=9176063623&state=Karnataka&save=1 HTTP/1.1" 200 4932
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:48:38] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:39] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:39] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:39] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:39] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:48:39] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:39] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:39] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:48:40] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:40] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:40] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /wetdays HTTP/1.1" 200 4384
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:50] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:48:51] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:48:51] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 09:48:51] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:49:10] "GET / HTTP/1.1" 200 6950
+64.233.173.149 - - [10/May/2015 09:49:31] "GET /bs/img/mail/logo_g.png HTTP/1.1" 200 19725
+64.233.173.149 - - [10/May/2015 09:49:31] "GET /bs/img/mail/hooray.gif HTTP/1.1" 200 6826
+64.233.173.149 - - [10/May/2015 09:49:31] "GET /bs/img/mail/fb1.png HTTP/1.1" 200 340
+64.233.173.154 - - [10/May/2015 09:49:31] "GET /bs/img/mail/tw1.png HTTP/1.1" 200 516
+64.233.173.149 - - [10/May/2015 09:49:31] "GET /bs/img/mail/email_background.jpg HTTP/1.1" 200 72131
+64.233.173.144 - - [10/May/2015 09:49:32] "GET /bs/img/mail/logo.png HTTP/1.1" 200 6734
+64.233.173.144 - - [10/May/2015 09:49:32] "GET /bs/img/mail/TN.png HTTP/1.1" 404 735
+64.233.173.149 - - [10/May/2015 09:49:32] "GET /bs/img/mail.png HTTP/1.1" 404 732
+64.233.173.149 - - [10/May/2015 09:49:54] "GET /bs/img/mail/TN.png HTTP/1.1" 404 735
+64.233.173.149 - - [10/May/2015 09:49:54] "GET /bs/img/mail.png HTTP/1.1" 404 732
+122.164.11.20 - - [10/May/2015 09:49:58] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 09:49:58] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:58] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/jquery.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-button.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/img/presentation3.jpg HTTP/1.1" 206 1
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+122.164.11.20 - - [10/May/2015 09:49:59] "GET /bs/img/presentation3.jpg HTTP/1.1" 206 24053
+122.164.11.20 - - [10/May/2015 09:50:00] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.164.11.20 - - [10/May/2015 09:50:00] "GET /ico/apple-touch-icon-144-precomposed.png HTTP/1.1" 404 801
+122.164.11.20 - - [10/May/2015 09:50:00] "GET /ico/apple-touch-icon-114-precomposed.png HTTP/1.1" 404 801
+122.164.11.20 - - [10/May/2015 09:50:00] "GET /ico/apple-touch-icon-72-precomposed.png HTTP/1.1" 404 799
+122.164.11.20 - - [10/May/2015 09:50:00] "GET /ico/apple-touch-icon-57-precomposed.png HTTP/1.1" 404 799
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /alldrydays HTTP/1.1" 200 24629
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 09:50:20] "GET /ico/favicon.png HTTP/1.1" 404 751
+122.164.11.20 - - [10/May/2015 10:00:58] "GET / HTTP/1.1" 200 6950
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+122.164.11.20 - - [10/May/2015 10:02:12] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 10:02:12] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/jquery.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-button.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/img/presentation3.jpg HTTP/1.1" 304 0
+122.164.11.20 - - [10/May/2015 10:02:13] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 304 0
+64.233.173.149 - - [10/May/2015 10:02:32] "GET /bs/img/mail/TN.png HTTP/1.1" 404 735
+64.233.173.144 - - [10/May/2015 10:02:32] "GET /bs/img/mail.png HTTP/1.1" 404 732
+122.164.11.20 - - [10/May/2015 10:02:36] "GET /unsubscribe/krpiyushmobile@gmail.com HTTP/1.1" 200 4444
+122.164.11.20 - - [10/May/2015 10:02:36] "GET /unsubscribe/bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.164.11.20 - - [10/May/2015 10:02:36] "GET /unsubscribe/bs/css/main.css HTTP/1.1" 200 1114
+122.164.11.20 - - [10/May/2015 10:02:36] "GET /unsubscribe/bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/jquery.js HTTP/1.1" 200 92629
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.164.11.20 - - [10/May/2015 10:02:37] "GET /unsubscribe/bs/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+122.164.11.20 - - [10/May/2015 10:02:39] "GET /unsubscribe/bs/favicon.png HTTP/1.1" 404 743
+122.164.11.20 - - [10/May/2015 10:02:39] "GET /unsubscribe/ico/apple-touch-icon-144-precomposed.png HTTP/1.1" 404 825
+122.164.11.20 - - [10/May/2015 10:02:39] "GET /unsubscribe/ico/apple-touch-icon-114-precomposed.png HTTP/1.1" 404 825
+122.164.11.20 - - [10/May/2015 10:02:39] "GET /unsubscribe/ico/apple-touch-icon-72-precomposed.png HTTP/1.1" 404 823
+122.164.11.20 - - [10/May/2015 10:02:39] "GET /unsubscribe/ico/apple-touch-icon-57-precomposed.png HTTP/1.1" 404 823
+122.164.11.20 - - [10/May/2015 10:02:41] "GET /unsubscribe/krpiyushmobile@gmail.com?save=1 HTTP/1.1" 200 3884
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/jquery.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-transition.js HTTP/1.1" 404 797
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-alert.js HTTP/1.1" 404 787
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-modal.js HTTP/1.1" 404 787
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-dropdown.js HTTP/1.1" 404 793
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-scrollspy.js HTTP/1.1" 404 795
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-tab.js HTTP/1.1" 404 783
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-tooltip.js HTTP/1.1" 404 791
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-popover.js HTTP/1.1" 404 791
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-button.js HTTP/1.1" 404 789
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-collapse.js HTTP/1.1" 404 793
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-carousel.js HTTP/1.1" 404 793
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/js/bootstrap-typeahead.js HTTP/1.1" 404 795
+122.164.11.20 - - [10/May/2015 10:02:42] "GET /unsubscribe/ico/favicon.png HTTP/1.1" 404 775
+122.171.116.42 - - [10/May/2015 10:02:57] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:04:07] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.171.116.42 - - [10/May/2015 10:04:07] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.116.42 - - [10/May/2015 10:04:07] "GET /bs/css/main.css HTTP/1.1" 200 1114
+64.233.173.154 - - [10/May/2015 10:04:15] "GET /bs/img/mail/image3.gif HTTP/1.1" 200 47179
+64.233.173.144 - - [10/May/2015 10:04:15] "GET /bs/img/mail/fb.png HTTP/1.1" 200 425
+64.233.173.154 - - [10/May/2015 10:04:15] "GET /bs/img/mail/image2.jpg HTTP/1.1" 200 65536
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+64.233.173.154 - - [10/May/2015 10:04:15] "GET /bs/img/mail/image2.jpg HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+64.233.173.154 - - [10/May/2015 10:04:15] "GET /bs/img/mail/image1.jpg HTTP/1.1" 200 65536
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+64.233.173.154 - - [10/May/2015 10:04:15] "GET /bs/img/mail/image1.jpg HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+64.233.173.149 - - [10/May/2015 10:04:15] "GET /bs/img/mail/tw.png HTTP/1.1" 200 487
+122.164.11.20 - - [10/May/2015 10:04:44] "GET /about HTTP/1.1" 200 4597
+122.164.11.20 - - [10/May/2015 10:04:44] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:04:44] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:04:44] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:04:44] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:04:44] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:44] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:04:45] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:04:46] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:46] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:46] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:04:55] "GET /bs/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /wetdays HTTP/1.1" 200 4384
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:04:58] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:04:59] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:04:59] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:05:00] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:05:00] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:05:01] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:05:01] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:05:01] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:05:01] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:05:01] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:05:01] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 10:05:01] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.116.42 - - [10/May/2015 10:05:07] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.171.116.42 - - [10/May/2015 10:05:07] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:06:02] "GET /bs/css/bootstrap.css HTTP/1.1" 200 98304
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 10:06:02] "GET /bs/css/bootstrap.css HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 10:06:02] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.116.42 - - [10/May/2015 10:06:02] "GET /bs/js/jquery.js HTTP/1.1" 200 65536
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 10:06:02] "GET /bs/js/jquery.js HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.164.11.20 - - [10/May/2015 10:06:02] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 10:06:02] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:06:02] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.116.42 - - [10/May/2015 10:06:02] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.116.42 - - [10/May/2015 10:06:02] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:06:03] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.116.42 - - [10/May/2015 10:06:06] "GET /bs/favicon.png HTTP/1.1" 404 731
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+122.164.11.20 - - [10/May/2015 10:12:35] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 10:12:40] "GET /about HTTP/1.1" 200 4597
+122.164.11.20 - - [10/May/2015 10:12:40] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:12:40] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:12:40] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:12:40] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:12:41] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:12:42] "GET / HTTP/1.1" 200 6950
+122.178.195.49 - - [10/May/2015 10:12:50] "GET / HTTP/1.1" 200 6950
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/jquery.js HTTP/1.1" 200 92629
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.178.195.49 - - [10/May/2015 10:12:51] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.178.195.49 - - [10/May/2015 10:12:52] "GET /bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.178.195.49 - - [10/May/2015 10:12:52] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /?name=&email=krpiyushmobile%40gmail.com&phone=9176063623&state=Karnataka&save=1 HTTP/1.1" 200 4932
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:13:05] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:13:06] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:13:06] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:13:06] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:13:06] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:13:06] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:13:06] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:13:07] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:13:07] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:13:07] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:13:07] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:13:57] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /wetdays HTTP/1.1" 200 4384
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:00] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:14:01] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /alldrydays HTTP/1.1" 200 24629
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:02] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:14:03] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:14:03] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:03] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:14:03] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:14:03] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:04] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:14:04] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:14:23] "GET / HTTP/1.1" 200 6950
+122.178.195.49 - - [10/May/2015 10:15:45] "GET / HTTP/1.1" 200 6950
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/css/main.css HTTP/1.1" 200 1114
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/jquery.js HTTP/1.1" 200 92629
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.178.195.49 - - [10/May/2015 10:15:51] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.178.195.49 - - [10/May/2015 10:15:52] "GET /bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.178.195.49 - - [10/May/2015 10:15:52] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.164.11.20 - - [10/May/2015 10:17:13] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 10:17:15] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 10:17:16] "GET /about HTTP/1.1" 200 4597
+122.164.11.20 - - [10/May/2015 10:17:16] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:17:16] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:17:16] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:17:16] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:17:16] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:17] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /wetdays HTTP/1.1" 200 4384
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:18] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 10:17:19] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:20] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 10:17:21] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 10:17:21] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:21] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 10:17:21] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.116.42 - - [10/May/2015 10:17:38] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:17:40] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:40] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/jquery.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:52] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:53] "GET /bs/js/bootstrap-button.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:53] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:53] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:53] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:17:53] "GET /bs/img/presentation3.jpg HTTP/1.1" 304 0
+122.171.116.42 - - [10/May/2015 10:18:01] "GET /bs/favicon.png HTTP/1.1" 404 731
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+122.171.116.42 - - [10/May/2015 10:26:36] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:26:56] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.171.116.42 - - [10/May/2015 10:26:56] "GET /bs/css/main.css HTTP/1.1" 200 1114
+122.171.116.42 - - [10/May/2015 10:26:56] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.116.42 - - [10/May/2015 10:27:57] "GET /bs/js/jquery.js HTTP/1.1" 200 90112
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 10:27:57] "GET /bs/js/jquery.js HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 10:27:57] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.116.42 - - [10/May/2015 10:27:57] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.116.42 - - [10/May/2015 10:27:57] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.171.116.42 - - [10/May/2015 10:27:57] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.116.42 - - [10/May/2015 10:27:57] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.171.116.42 - - [10/May/2015 10:27:57] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:28:00] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.116.42 - - [10/May/2015 10:28:00] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.116.42 - - [10/May/2015 10:29:40] "GET /bs/js/jquery.js HTTP/1.1" 200 92629
+122.171.116.42 - - [10/May/2015 10:29:40] "GET /bs/css/bootstrap.css HTTP/1.1" 200 73728
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 10:29:40] "GET /bs/css/bootstrap.css HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 10:29:40] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.171.116.42 - - [10/May/2015 10:29:40] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.116.42 - - [10/May/2015 10:29:40] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.171.116.42 - - [10/May/2015 10:29:40] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.171.116.42 - - [10/May/2015 10:29:42] "GET / HTTP/1.1" 200 6950
+122.171.116.42 - - [10/May/2015 10:48:10] "GET /bs/css/bootstrap.css HTTP/1.1" 200 98304
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+122.171.116.42 - - [10/May/2015 10:48:10] "GET /bs/css/bootstrap.css HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 11:04:34] "GET /bs/js/jquery.js HTTP/1.1" 200 65536
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+122.171.116.42 - - [10/May/2015 11:04:34] "GET /bs/js/jquery.js HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+122.171.116.42 - - [10/May/2015 11:04:34] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.116.42 - - [10/May/2015 11:04:34] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.116.42 - - [10/May/2015 11:04:34] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.116.42 - - [10/May/2015 11:04:34] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.178.195.49 - - [10/May/2015 11:04:34] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.164.11.20 - - [10/May/2015 12:06:07] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /about HTTP/1.1" 200 4597
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:10] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 12:06:11] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:11] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:11] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:11] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:11] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 12:06:11] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:11] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /alldrydays HTTP/1.1" 200 24629
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:12] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /wetdays HTTP/1.1" 200 4384
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:13] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.11.20 - - [10/May/2015 12:06:14] "GET /about HTTP/1.1" 200 4597
+122.164.11.20 - - [10/May/2015 12:06:14] "GET / HTTP/1.1" 200 6950
+122.164.11.20 - - [10/May/2015 12:06:14] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /alldrydays HTTP/1.1" 200 24629
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /bs/css/main.css HTTP/1.1" 304 0
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/jquery.js HTTP/1.1" 404 745
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+1.39.62.143 - - [10/May/2015 12:33:10] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+1.39.62.143 - - [10/May/2015 12:33:11] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+1.39.62.143 - - [10/May/2015 12:33:11] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+66.249.83.199 - - [10/May/2015 14:28:21] "GET /kab_hain_holi_1.jpg HTTP/1.1" 404 759
+113.243.57.52 - - [10/May/2015 15:28:04] "GET / HTTP/1.1" 200 6950
+113.243.57.52 - - [10/May/2015 15:28:05] "GET http://www.msftncsi.com/ncsi.txt HTTP/1.1" 404 787
+113.243.57.52 - - [10/May/2015 15:28:05] "GET /HNAP1/ HTTP/1.1" 404 733
+117.21.226.160 - - [10/May/2015 15:39:38] "POST /cgi-bin/php5?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1311
+117.21.226.160 - - [10/May/2015 15:39:39] "POST /cgi-bin/php.cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1317
+117.21.226.160 - - [10/May/2015 15:39:40] "POST /cgi-bin/php-cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1317
+117.21.226.160 - - [10/May/2015 15:39:41] "POST /cgi-bin/php?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1309
+117.21.226.160 - - [10/May/2015 15:39:41] "POST /cgi-bin/php4?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1311
+117.21.226.160 - - [10/May/2015 15:50:43] "POST /cgi-bin/php5?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1311
+117.21.226.160 - - [10/May/2015 15:50:43] "POST /cgi-bin/php.cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1317
+117.21.226.160 - - [10/May/2015 15:50:44] "POST /cgi-bin/php-cgi?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1317
+117.21.226.160 - - [10/May/2015 15:50:44] "POST /cgi-bin/php?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1309
+117.21.226.160 - - [10/May/2015 15:50:45] "POST /cgi-bin/php4?%2D%64+%61%6C%6C%6F%77%5F%75%72%6C%5F%69%6E%63%6C%75%64%65%3D%6F%6E+%2D%64+%73%61%66%65%5F%6D%6F%64%65%3D%6F%66%66+%2D%64+%73%75%68%6F%73%69%6E%2E%73%69%6D%75%6C%61%74%69%6F%6E%3D%6F%6E+%2D%64+%64%69%73%61%62%6C%65%5F%66%75%6E%63%74%69%6F%6E%73%3D%22%22+%2D%64+%6F%70%65%6E%5F%62%61%73%65%64%69%72%3D%6E%6F%6E%65+%2D%64+%61%75%74%6F%5F%70%72%65%70%65%6E%64%5F%66%69%6C%65%3D%70%68%70%3A%2F%2F%69%6E%70%75%74+%2D%64+%63%67%69%2E%66%6F%72%63%65%5F%72%65%64%69%72%65%63%74%3D%30+%2D%64+%63%67%69%2E%72%65%64%69%72%65%63%74%5F%73%74%61%74%75%73%5F%65%6E%76%3D%30+%2D%6E HTTP/1.1" 404 1311
+66.249.79.115 - - [10/May/2015 17:07:33] "GET /robots.txt HTTP/1.1" 404 741
+66.249.79.115 - - [10/May/2015 17:07:33] "GET / HTTP/1.1" 200 6950
+182.118.53.67 - - [10/May/2015 19:53:02] "GET / HTTP/1.1" 200 6950
+182.118.53.74 - - [10/May/2015 20:22:53] "GET / HTTP/1.1" 200 6950
+122.167.129.41 - - [11/May/2015 01:50:45] "GET / HTTP/1.1" 200 6950
+122.167.129.41 - - [11/May/2015 01:50:45] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.167.129.41 - - [11/May/2015 01:50:45] "GET /bs/css/main.css HTTP/1.1" 200 1114
+122.167.129.41 - - [11/May/2015 01:50:45] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.167.129.41 - - [11/May/2015 01:50:47] "GET /bs/js/jquery.js HTTP/1.1" 200 92629
+122.167.129.41 - - [11/May/2015 01:50:47] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.167.129.41 - - [11/May/2015 01:50:47] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.167.129.41 - - [11/May/2015 01:50:47] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.167.129.41 - - [11/May/2015 01:50:48] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.167.129.41 - - [11/May/2015 01:50:48] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.167.129.41 - - [11/May/2015 01:50:48] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.167.129.41 - - [11/May/2015 01:50:48] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.167.129.41 - - [11/May/2015 01:50:48] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.167.129.41 - - [11/May/2015 01:50:49] "GET /bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.167.129.41 - - [11/May/2015 01:50:49] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.167.129.41 - - [11/May/2015 01:50:49] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.167.129.41 - - [11/May/2015 01:50:49] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.167.129.41 - - [11/May/2015 01:50:51] "GET /bs/img/presentation3.jpg HTTP/1.1" 304 0
+122.167.129.41 - - [11/May/2015 01:50:51] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 304 0
+122.167.129.41 - - [11/May/2015 01:50:51] "GET /bs/favicon.png HTTP/1.1" 404 731
+78.129.148.77 - - [11/May/2015 02:05:47] "GET /cgi-bin/rtpd.cgi HTTP/1.0" 404 745
+111.74.239.125 - - [11/May/2015 02:38:22] "GET /manager/html HTTP/1.1" 404 745
+69.171.227.113 - - [11/May/2015 05:54:11] "GET / HTTP/1.1" 200 6950
+202.76.242.45 - - [11/May/2015 06:53:25] "GET / HTTP/1.1" 200 6950
+202.76.242.45 - - [11/May/2015 06:53:30] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Chandigarh&save=1 HTTP/1.1" 200 7018
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 862, in _handle
+    return route.call(**args)
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 1732, in wrapper
+    rv = callback(*a, **ka)
+  File "./home_page.py", line 157, in new_user
+    dUserInfo = fNewUserData(lHtmlFields)
+  File "./home_page.py", line 147, in fNewUserData
+    sUserNxtDryDay=str(''.join(tUserDryDay[0]))
+IndexError: list index out of range
+202.76.242.45 - - [11/May/2015 06:53:39] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Chhattisgarh&save=1 HTTP/1.1" 500 1562
+202.76.242.45 - - [11/May/2015 06:53:39] "GET /favicon.ico HTTP/1.1" 404 743
+202.76.242.45 - - [11/May/2015 06:54:11] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Daman+%26+Diu&save=1 HTTP/1.1" 200 7018
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Goa&save=1 HTTP/1.1" 200 4926
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/jquery.js HTTP/1.1" 404 745
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 06:54:19] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+202.76.242.45 - - [11/May/2015 06:54:20] "GET /ico/favicon.png HTTP/1.1" 404 751
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Haryana&save=1 HTTP/1.1" 200 4930
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/jquery.js HTTP/1.1" 404 745
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 06:56:52] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 06:56:53] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+202.76.242.45 - - [11/May/2015 07:01:42] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=J%26K-Jammu+Region&save=1 HTTP/1.1" 200 4943
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/jquery.js HTTP/1.1" 404 745
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+202.76.242.45 - - [11/May/2015 07:01:43] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:23:01] "GET / HTTP/1.1" 200 6950
+182.72.111.170 - - [11/May/2015 07:23:16] "GET / HTTP/1.1" 200 6950
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/css/main.css HTTP/1.1" 200 1114
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/jquery.js HTTP/1.1" 200 92629
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+182.72.111.170 - - [11/May/2015 07:23:17] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+182.72.111.170 - - [11/May/2015 07:23:18] "GET /bs/img/presentation3.jpg HTTP/1.1" 200 125822
+182.72.111.170 - - [11/May/2015 07:23:18] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+182.72.111.170 - - [11/May/2015 07:23:20] "GET /bs/favicon.png HTTP/1.1" 404 731
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /about HTTP/1.1" 200 4597
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:23:27] "GET /ico/favicon.png HTTP/1.1" 404 751
+182.72.111.170 - - [11/May/2015 07:23:28] "GET /?name=&email=krpiyushmobile%40gmail.com&phone=9176063623&state=Tamilnadu&save=1 HTTP/1.1" 200 4932
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:23:29] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:23:30] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:30] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:23:30] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 07:23:30] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:23:30] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:23:31] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 07:23:31] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:31] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:23:32] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:24:40] "GET /wetdays HTTP/1.1" 200 4384
+182.72.111.170 - - [11/May/2015 07:24:40] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 07:24:40] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:24:40] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 07:24:40] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:24:40] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:24:40] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:24:41] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 07:24:41] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:24:41] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:24:41] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:24:41] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:24:41] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 07:24:41] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /alldrydays HTTP/1.1" 200 24629
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 07:24:59] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:01:58] "GET / HTTP/1.1" 200 6950
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /wetdays HTTP/1.1" 200 4384
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:03:06] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:08:50] "GET /alldrydays HTTP/1.1" 200 24629
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:51] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:08:53] "GET / HTTP/1.1" 200 6950
+182.72.111.170 - - [11/May/2015 08:08:55] "GET /about HTTP/1.1" 200 4597
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:56] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:08:56] "GET / HTTP/1.1" 200 6950
+182.72.111.170 - - [11/May/2015 08:08:58] "GET /wetdays HTTP/1.1" 200 4384
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:08:59] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /alldrydays HTTP/1.1" 200 24629
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/jquery.js HTTP/1.1" 404 745
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+182.72.111.170 - - [11/May/2015 08:09:00] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:09:01] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+182.72.111.170 - - [11/May/2015 08:09:01] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+182.72.111.170 - - [11/May/2015 08:09:01] "GET / HTTP/1.1" 200 6950
+66.249.84.199 - - [11/May/2015 09:19:47] "GET / HTTP/1.1" 200 6950
+66.249.84.193 - - [11/May/2015 09:19:48] "GET /bs/favicon.png HTTP/1.1" 404 731
+64.233.173.154 - - [11/May/2015 09:19:49] "GET / HTTP/1.1" 200 6950
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+64.233.173.144 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/css/main.css HTTP/1.1" 200 1114
+64.233.173.154 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/js/jquery.js HTTP/1.1" 200 92629
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+64.233.173.154 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+64.233.173.154 - - [11/May/2015 09:19:49] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+64.233.173.154 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+64.233.173.154 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+64.233.173.144 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/css/bootstrap.css HTTP/1.1" 200 127252
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+64.233.173.149 - - [11/May/2015 09:19:49] "GET /bs/img/presentation3.jpg HTTP/1.1" 200 125822
+64.233.173.144 - - [11/May/2015 09:19:50] "GET /bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 117, in handle
+    if not self.parse_request(): # An error code has been sent, just exit
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 291, in parse_request
+    self.headers = self.MessageClass(self.rfile, 0)
+  File "/usr/lib/python2.7/mimetools.py", line 25, in __init__
+    rfc822.Message.__init__(self, fp, seekable)
+  File "/usr/lib/python2.7/rfc822.py", line 108, in __init__
+    self.readheaders()
+  File "/usr/lib/python2.7/rfc822.py", line 155, in readheaders
+    line = self.fp.readline()
+  File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+122.171.98.70 - - [11/May/2015 10:49:56] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 10:49:57] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.171.98.70 - - [11/May/2015 10:50:09] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Jharkhand&save=1 HTTP/1.1" 200 4932
+122.171.98.70 - - [11/May/2015 10:50:09] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.98.70 - - [11/May/2015 10:50:09] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 10:50:09] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 10:50:09] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 10:50:09] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 10:50:10] "GET /ico/favicon.png HTTP/1.1" 404 751
+122.171.98.70 - - [11/May/2015 10:57:27] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Karnataka&save=1 HTTP/1.1" 200 7018
+122.171.98.70 - - [11/May/2015 10:57:33] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Kerala&save=1 HTTP/1.1" 200 7018
+122.171.98.70 - - [11/May/2015 10:57:41] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Madhya+Pradesh&save=1 HTTP/1.1" 200 7018
+122.171.98.70 - - [11/May/2015 10:57:47] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Maharashtra&save=1 HTTP/1.1" 200 4934
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 10:57:48] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 10:58:08] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 10:58:09] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+64.233.173.154 - - [11/May/2015 10:58:43] "GET /bs/img/mail/hooray.gif HTTP/1.1" 200 6826
+64.233.173.149 - - [11/May/2015 10:58:43] "GET /bs/img/mail/tw1.png HTTP/1.1" 200 516
+64.233.173.149 - - [11/May/2015 10:58:43] "GET /bs/img/mail/fb1.png HTTP/1.1" 200 340
+64.233.173.149 - - [11/May/2015 10:58:43] "GET /bs/img/mail/email_background.jpg HTTP/1.1" 200 72131
+64.233.173.154 - - [11/May/2015 10:58:43] "GET /bs/img/mail/tn1.jpg HTTP/1.1" 200 44521
+64.233.173.144 - - [11/May/2015 10:58:43] "GET /bs/img/mail/logo_g.png HTTP/1.1" 200 19725
+122.171.98.70 - - [11/May/2015 11:00:48] "GET /bs/img/780_home_new_1.png HTTP/1.1" 200 115918
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+122.164.39.254 - - [11/May/2015 11:03:59] "GET / HTTP/1.1" 200 6950
+122.164.39.254 - - [11/May/2015 11:04:19] "GET /?name=&email=krpiyushmobile%40gmail.com&phone=9176063623&state=Karnataka&save=1 HTTP/1.1" 200 7018
+122.171.98.70 - - [11/May/2015 11:05:47] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/jquery.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-transition.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-alert.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-modal.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-dropdown.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-scrollspy.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-tab.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-tooltip.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-popover.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-button.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-collapse.js HTTP/1.1" 304 0
+122.171.98.70 - - [11/May/2015 11:05:48] "GET /bs/js/bootstrap-carousel.js HTTP/1.1" 304 0
+122.164.39.254 - - [11/May/2015 11:05:52] "GET /?name=&email=krpiyushmobile%40gmail.com&phone=9176063623&state=Assam&save=1 HTTP/1.1" 200 4928
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:05:53] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:06:08] "GET /bs/img/presentation3.jpg HTTP/1.1" 304 0
+64.233.173.149 - - [11/May/2015 11:06:40] "GET /bs/img/mail/hooray.gif HTTP/1.1" 200 6826
+64.233.173.154 - - [11/May/2015 11:06:40] "GET /bs/img/mail/fb1.png HTTP/1.1" 200 340
+64.233.173.144 - - [11/May/2015 11:06:40] "GET /bs/img/mail/email_background.jpg HTTP/1.1" 200 72131
+64.233.173.144 - - [11/May/2015 11:06:40] "GET /bs/img/mail/logo_g.png HTTP/1.1" 200 19725
+64.233.173.154 - - [11/May/2015 11:06:41] "GET /bs/img/mail/tw1.png HTTP/1.1" 200 516
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /alldrydays HTTP/1.1" 200 24629
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:07:18] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:08:59] "GET /alldrydays HTTP/1.1" 200 24629
+122.164.39.254 - - [11/May/2015 11:08:59] "GET /bs/css/bootstrap.css HTTP/1.1" 304 0
+122.164.39.254 - - [11/May/2015 11:08:59] "GET /bs/css/main.css HTTP/1.1" 304 0
+122.164.39.254 - - [11/May/2015 11:08:59] "GET /bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:09:00] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:12:10] "GET / HTTP/1.1" 200 6950
+122.164.39.254 - - [11/May/2015 11:12:47] "GET /?name=&email=krpiyushmobile%40gmail.com&phone=9176063623&state=Bihar&save=1 HTTP/1.1" 200 4928
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:12:48] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.164.39.254 - - [11/May/2015 11:12:49] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:12:49] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.164.39.254 - - [11/May/2015 11:12:49] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.164.39.254 - - [11/May/2015 11:12:49] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:12:49] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.164.39.254 - - [11/May/2015 11:12:49] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.164.39.254 - - [11/May/2015 11:14:14] "GET / HTTP/1.1" 200 6950
+122.164.39.254 - - [11/May/2015 11:14:37] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 11:16:43] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Chhattisgarh&save=1 HTTP/1.1" 200 7018
+122.164.39.254 - - [11/May/2015 11:16:45] "GET / HTTP/1.1" 200 6950
+122.164.39.254 - - [11/May/2015 11:17:00] "GET /unsubscribe HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 4447
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/css/main.css HTTP/1.1" 200 1114
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/jquery.js HTTP/1.1" 200 92629
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.171.98.70 - - [11/May/2015 11:17:01] "GET /unsubscribe/bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.171.98.70 - - [11/May/2015 11:17:02] "GET /unsubscribe/bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.171.98.70 - - [11/May/2015 11:17:02] "GET /unsubscribe/bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.171.98.70 - - [11/May/2015 11:17:02] "GET /unsubscribe/bs/favicon.png HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/shekhawat.anirudh@gmail.com?save=1 HTTP/1.1" 200 3884
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/jquery.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-transition.js HTTP/1.1" 404 797
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-alert.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-modal.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-dropdown.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-scrollspy.js HTTP/1.1" 404 795
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-tab.js HTTP/1.1" 404 783
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-tooltip.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-popover.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-button.js HTTP/1.1" 404 789
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-collapse.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-carousel.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:17:10] "GET /unsubscribe/js/bootstrap-typeahead.js HTTP/1.1" 404 795
+122.171.98.70 - - [11/May/2015 11:17:15] "GET /unsubscribe/ico/favicon.png HTTP/1.1" 404 775
+122.171.98.70 - - [11/May/2015 11:17:15] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Karnataka&save=1 HTTP/1.1" 200 4932
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/jquery.js HTTP/1.1" 404 745
+122.164.39.254 - - [11/May/2015 11:17:19] "GET /unsubscribe?email=krpiyush@gmail.com HTTP/1.1" 404 768
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 11:17:19] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Chhattisgarh&save=1 HTTP/1.1" 200 4935
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 11:17:26] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:17:27] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:17:27] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 11:17:32] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:32] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:17:32] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:17:32] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:33] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:17:33] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 11:17:33] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:17:33] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:17:34] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 11:17:34] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:34] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:17:34] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:34:31] "GET /unsubscribe/bs/img/780_home_new_1.png HTTP/1.1" 200 115918
+122.171.98.70 - - [11/May/2015 11:45:36] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4458
+122.171.98.70 - - [11/May/2015 11:45:38] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4458
+122.171.98.70 - - [11/May/2015 11:45:40] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4458
+122.171.98.70 - - [11/May/2015 11:45:42] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4458
+122.171.98.70 - - [11/May/2015 11:48:25] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4386
+122.171.98.70 - - [11/May/2015 11:48:25] "GET /unsubscribe/bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.171.98.70 - - [11/May/2015 11:48:25] "GET /unsubscribe/bs/css/main.css HTTP/1.1" 200 1114
+122.171.98.70 - - [11/May/2015 11:48:25] "GET /unsubscribe/bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.98.70 - - [11/May/2015 11:48:25] "GET /unsubscribe/bs/js/jquery.js HTTP/1.1" 200 92629
+122.171.98.70 - - [11/May/2015 11:48:25] "GET /unsubscribe/bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.98.70 - - [11/May/2015 11:48:25] "GET /unsubscribe/bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.171.98.70 - - [11/May/2015 11:48:26] "GET /unsubscribe/bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.171.98.70 - - [11/May/2015 11:48:46] "GET /unsubscribe/bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.171.98.70 - - [11/May/2015 11:48:46] "GET /unsubscribe/bs/favicon.png HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 11:51:40] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:51:40] "GET /unsubscribe/bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.171.98.70 - - [11/May/2015 11:51:43] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:51:46] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:51:54] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/css/main.css HTTP/1.1" 200 1114
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/jquery.js HTTP/1.1" 200 92629
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.171.98.70 - - [11/May/2015 11:52:04] "GET /unsubscribe/bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.171.98.70 - - [11/May/2015 11:52:05] "GET /unsubscribe/bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.171.98.70 - - [11/May/2015 11:52:07] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:52:07] "GET /unsubscribe/bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.171.98.70 - - [11/May/2015 11:52:07] "GET /unsubscribe/bs/favicon.png HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /wetdays HTTP/1.1" 200 4384
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:52:27] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:52:29] "GET /ico/favicon.png HTTP/1.1" 404 751
+122.171.98.70 - - [11/May/2015 11:52:39] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/shekhawat.anirudh@gmail.com?save=1 HTTP/1.1" 200 3762
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/jquery.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-transition.js HTTP/1.1" 404 797
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-alert.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-modal.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-dropdown.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-scrollspy.js HTTP/1.1" 404 795
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-tab.js HTTP/1.1" 404 783
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-tooltip.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-popover.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-button.js HTTP/1.1" 404 789
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-collapse.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:52:44] "GET /unsubscribe/js/bootstrap-carousel.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:52:45] "GET /unsubscribe/js/bootstrap-typeahead.js HTTP/1.1" 404 795
+122.171.98.70 - - [11/May/2015 11:52:45] "GET /unsubscribe/ico/favicon.png HTTP/1.1" 404 775
+122.171.98.70 - - [11/May/2015 11:53:19] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:53:23] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:53:52] "GET /wetdays HTTP/1.1" 200 4384
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:53:53] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:54:22] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+191.238.248.32 - - [11/May/2015 11:54:26] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 11:54:27] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+191.238.248.32 - - [11/May/2015 11:54:27] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 404 771
+191.238.248.32 - - [11/May/2015 11:54:27] "GET / HTTP/1.0" 200 6950
+191.238.248.32 - - [11/May/2015 11:54:28] "OPTIONS / HTTP/1.0" 405 726
+191.238.248.32 - - [11/May/2015 11:54:28] code 400, message Bad request version ('RTSP/1.0')
+191.238.248.32 - - [11/May/2015 11:54:28] "OPTIONS / RTSP/1.0" 400 -
+191.238.248.32 - - [11/May/2015 11:54:33] code 400, message Bad HTTP/0.9 request type ('l\x00')
+191.238.248.32 - - [11/May/2015 11:54:33] "l          " 400 -
+191.238.248.32 - - [11/May/2015 11:54:34] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G\xd7\xf7\xba,\xee\xea\xb2`~\xf3\x00\xfd\x82{\xb9\xd5\x96\xc8w\x9b\xe6\xc4\xdb<=\xdbo\xef\x10n\x00\x00(\x00\x16\x00\x13\x00')
+191.238.248.32 - - [11/May/2015 11:54:34] "  S  O ?G×÷º,îê²`~ó ý‚{¹Õ–Èw›æÄÛ<=Ûoïn  (   " 400 -
+122.171.98.70 - - [11/May/2015 11:55:00] "GET /unsubscribe/shekhawat.anirudh@gmail.com?save=0 HTTP/1.1" 200 3762
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/jquery.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-transition.js HTTP/1.1" 404 797
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-alert.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-modal.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-dropdown.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-scrollspy.js HTTP/1.1" 404 795
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-tab.js HTTP/1.1" 404 783
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-tooltip.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-popover.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-button.js HTTP/1.1" 404 789
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-collapse.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:55:01] "GET /unsubscribe/js/bootstrap-carousel.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 11:55:12] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:59:35] "GET /unsubscribe/shekhawat.anirudh@gmail.com?submit=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 11:59:36] "GET /unsubscribe/bs/favicon.png HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 12:03:20] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 12:03:21] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Karnataka&save=1 HTTP/1.1" 200 4932
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 12:03:24] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 12:03:37] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 12:03:37] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 12:03:37] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 12:03:41] "GET /unsubscribe/shekhawat.anirudh@gmail.com? HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 12:13:59] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4389
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+122.171.98.70 - - [11/May/2015 12:19:13] "GET /unsubscribe/shekhawat.anirudh HTTP/1.1" 200 0
+122.171.98.70 - - [11/May/2015 12:19:13] "GET /favicon.ico HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 12:19:20] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 0
+122.171.98.70 - - [11/May/2015 12:19:24] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 0
+122.171.98.70 - - [11/May/2015 12:19:24] "GET /favicon.ico HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 12:19:24] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 0
+122.171.98.70 - - [11/May/2015 12:19:25] "GET /favicon.ico HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 12:19:33] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 0
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 862, in _handle
+    return route.call(**args)
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 1732, in wrapper
+    rv = callback(*a, **ka)
+  File "./home_page.py", line 176, in unsubscribe_user
+    return template('unsubscribe.tpl')
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 3595, in template
+    return TEMPLATES[tplid].render(kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 3399, in render
+    self.execute(stdout, env)
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 3386, in execute
+    eval(self.co, env)
+  File "/var/www/bb-whenisdryday/unsubscribe.tpl", line 51, in <module>
+    <form action="/unsubscribe/{{emailid}}" method="GET">
+NameError: name 'emailid' is not defined
+122.171.98.70 - - [11/May/2015 12:25:04] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 500 1946
+122.171.98.70 - - [11/May/2015 12:25:04] "GET /favicon.ico HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 12:25:11] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 12:25:11] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 12:25:12] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.171.98.70 - - [11/May/2015 12:25:15] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Karnataka&save=1 HTTP/1.1" 200 7018
+122.171.98.70 - - [11/May/2015 12:25:19] "GET /?name=anirudh+singh+shekhawat&email=shekhawat.anirudh%40gmail.com&phone=9986268685&state=Bihar&save=1 HTTP/1.1" 200 4928
+122.171.98.70 - - [11/May/2015 12:25:19] "GET /js/jquery.js HTTP/1.1" 404 745
+122.171.98.70 - - [11/May/2015 12:25:19] "GET /js/bootstrap-transition.js HTTP/1.1" 404 773
+122.171.98.70 - - [11/May/2015 12:25:19] "GET /js/bootstrap-alert.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 12:25:19] "GET /js/bootstrap-modal.js HTTP/1.1" 404 763
+122.171.98.70 - - [11/May/2015 12:25:19] "GET /js/bootstrap-dropdown.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 12:25:19] "GET /js/bootstrap-scrollspy.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /js/bootstrap-tab.js HTTP/1.1" 404 759
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /js/bootstrap-tooltip.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /js/bootstrap-popover.js HTTP/1.1" 404 767
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /js/bootstrap-button.js HTTP/1.1" 404 765
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /js/bootstrap-collapse.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /js/bootstrap-carousel.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /js/bootstrap-typeahead.js HTTP/1.1" 404 771
+122.171.98.70 - - [11/May/2015 12:25:20] "GET /ico/favicon.png HTTP/1.1" 404 751
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 862, in _handle
+    return route.call(**args)
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 1732, in wrapper
+    rv = callback(*a, **ka)
+  File "./home_page.py", line 176, in unsubscribe_user
+    return template('unsubscribe.tpl')
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 3595, in template
+    return TEMPLATES[tplid].render(kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 3399, in render
+    self.execute(stdout, env)
+  File "/usr/local/lib/python2.7/dist-packages/bottle.py", line 3386, in execute
+    eval(self.co, env)
+  File "/var/www/bb-whenisdryday/unsubscribe.tpl", line 51, in <module>
+    <form action="/unsubscribe/{{emailid}}" method="GET">
+NameError: name 'emailid' is not defined
+122.171.98.70 - - [11/May/2015 12:25:25] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 500 1946
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+Bottle v0.12.8 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:80/
+Hit Ctrl-C to quit.
+
+122.171.98.70 - - [11/May/2015 12:30:58] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 4389
+122.171.98.70 - - [11/May/2015 12:30:58] "GET /unsubscribe/bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.171.98.70 - - [11/May/2015 12:30:58] "GET /unsubscribe/bs/css/main.css HTTP/1.1" 200 1114
+122.171.98.70 - - [11/May/2015 12:30:58] "GET /unsubscribe/bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.98.70 - - [11/May/2015 12:30:58] "GET /unsubscribe/bs/js/jquery.js HTTP/1.1" 200 92629
+122.171.98.70 - - [11/May/2015 12:30:58] "GET /unsubscribe/bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.171.98.70 - - [11/May/2015 12:30:59] "GET /unsubscribe/bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.171.98.70 - - [11/May/2015 12:31:19] "GET /unsubscribe/bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4384
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/jquery.js HTTP/1.1" 404 769
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-transition.js HTTP/1.1" 404 797
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-alert.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-modal.js HTTP/1.1" 404 787
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-scrollspy.js HTTP/1.1" 404 795
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-tab.js HTTP/1.1" 404 783
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-tooltip.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-popover.js HTTP/1.1" 404 791
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-button.js HTTP/1.1" 404 789
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-carousel.js HTTP/1.1" 404 793
+122.171.98.70 - - [11/May/2015 12:31:20] "GET /unsubscribe/js/bootstrap-typeahead.js HTTP/1.1" 404 795
+122.171.98.70 - - [11/May/2015 12:31:21] "GET /unsubscribe/ico/favicon.png HTTP/1.1" 404 775
+122.171.98.70 - - [11/May/2015 12:31:22] "GET /unsubscribe/ico/favicon.png HTTP/1.1" 404 775
+122.171.98.70 - - [11/May/2015 12:31:25] "GET /unsubscribe/bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.171.98.70 - - [11/May/2015 12:31:25] "GET /unsubscribe/bs/favicon.png HTTP/1.1" 404 743
+122.171.98.70 - - [11/May/2015 12:31:56] "GET / HTTP/1.1" 200 6950
+122.171.98.70 - - [11/May/2015 12:31:56] "GET /bs/favicon.png HTTP/1.1" 404 731
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 4389
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/css/bootstrap.css HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/css/main.css HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/css/bootstrap-responsive.css HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/jquery.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-transition.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-alert.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-modal.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-dropdown.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-scrollspy.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-tab.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-tooltip.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 4389
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-popover.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-collapse.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-button.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:23] "GET /unsubscribe/bs/js/bootstrap-carousel.js HTTP/1.1" 304 0
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/css/bootstrap.css HTTP/1.1" 200 127252
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/css/main.css HTTP/1.1" 200 1114
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/css/bootstrap-responsive.css HTTP/1.1" 200 21184
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/jquery.js HTTP/1.1" 200 92629
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-transition.js HTTP/1.1" 200 1756
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-alert.js HTTP/1.1" 200 2524
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-modal.js HTTP/1.1" 200 6656
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-dropdown.js HTTP/1.1" 200 4203
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-scrollspy.js HTTP/1.1" 200 4655
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-tab.js HTTP/1.1" 200 3496
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-tooltip.js HTTP/1.1" 200 9911
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-popover.js HTTP/1.1" 200 3115
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-button.js HTTP/1.1" 200 2841
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-collapse.js HTTP/1.1" 200 4735
+122.171.118.27 - - [11/May/2015 13:49:24] "GET /unsubscribe/bs/js/bootstrap-carousel.js HTTP/1.1" 200 6057
+122.171.118.27 - - [11/May/2015 13:49:37] "GET / HTTP/1.1" 200 6950
+122.171.118.27 - - [11/May/2015 13:49:38] "GET /bs/favicon.png HTTP/1.1" 404 731
+185.35.62.11 - - [11/May/2015 13:50:05] "HEAD / HTTP/1.1" 200 0
+122.171.118.27 - - [11/May/2015 14:00:27] "GET /unsubscribe/shekhawat.anirudh@gmail.com HTTP/1.1" 200 4389
+122.171.118.27 - - [11/May/2015 14:00:27] "GET /unsubscribe/bs/js/bootstrap-typeahead.js HTTP/1.1" 200 8320
+122.171.118.27 - - [11/May/2015 14:00:27] "GET /unsubscribe/bs/img/presentation3.jpg HTTP/1.1" 200 125822
+122.171.118.27 - - [11/May/2015 14:00:27] "GET /unsubscribe/bs/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+122.171.118.27 - - [11/May/2015 14:00:28] "GET /unsubscribe/bs/favicon.png HTTP/1.1" 404 743
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/shekhawat.anirudh@gmail.com?cancel=0 HTTP/1.1" 200 4384
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/jquery.js HTTP/1.1" 404 769
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-transition.js HTTP/1.1" 404 797
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-alert.js HTTP/1.1" 404 787
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-modal.js HTTP/1.1" 404 787
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-dropdown.js HTTP/1.1" 404 793
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-scrollspy.js HTTP/1.1" 404 795
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-tab.js HTTP/1.1" 404 783
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-tooltip.js HTTP/1.1" 404 791
+122.171.118.27 - - [11/May/2015 14:00:41] "GET /unsubscribe/js/bootstrap-popover.js HTTP/1.1" 404 791
+122.171.118.27 - - [11/May/2015 14:00:42] "GET /unsubscribe/js/bootstrap-button.js HTTP/1.1" 404 789
+122.171.118.27 - - [11/May/2015 14:00:42] "GET /unsubscribe/js/bootstrap-collapse.js HTTP/1.1" 404 793
+122.171.118.27 - - [11/May/2015 14:00:48] "GET /unsubscribe/js/bootstrap-typeahead.js HTTP/1.1" 404 795
+122.171.118.27 - - [11/May/2015 14:00:48] "GET /unsubscribe/ico/favicon.png HTTP/1.1" 404 775

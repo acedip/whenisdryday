@@ -1,17 +1,17 @@
        /* For Desktop */
  @media (min-width: 768px) {
 	.background {
-		background: #f1e3b2 url("../img/home_page_final_2c.jpg") no-repeat top fixed;
-		-webkit-background-size: 100% 100%;
+		background: #f1e3b2 url("../img/presentation3.jpg") no-repeat bottom fixed;
+/*		-webkit-background-size: 100% 100%;
 		-moz-background-size: 100% 100%;
-		-o-background-size: 100% 100%;
+		-o-background-size: 100% 100%; */
 		background-size: 100% 100%;
 	}
 }
       /* For Tablet */
 @media (max-width: 768px) {
 	.background {
-		background: #f1e3b2 url("../img/780_home_page_final_2b.jpg") no-repeat top fixed;
+		background: #f1e3b2 url("../img/780_home_new_1.png") no-repeat bottom fixed;
 		-webkit-background-size: 100% 100%;
 		-moz-background-size: 100% 100%;
 		-o-background-size: 100% 100%;

@@ -13,155 +13,167 @@
 #	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #	GNU General Public License for more details http://www.gnu.org/licenses
 
-import MySQLdb as mdb
+import sqlite3
 import datetime
+import time
 from bottle import route, run, debug, template, request, static_file
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from multiprocessing.connection import Client
 import cPickle as pickle
+import errno, socket
+import sys
+
+gMailTS = datetime.datetime.now()
 
 # DB Connection
-con = mdb.connect('localhost', 'testuser', 'test1', 'testdb')
+con = sqlite3.connect('./src/db/dryday.db')
+#con = sqlite3.connect('./src/db/test.db')
+# sqlite3 unicode to string conversion
+con.text_factory = str
 # Table Name
 sWUser = 'dw_user'
 sWUserLive = 'dw_user_live'
 sWDryDay = 'dw_dryday'
 
-def fPostMailToServer(sMsg):
+#execute("create table dw_dryday (state text, reason text, drydate text)")
+#execute("create table dw_user (name text, email text, state text, phone integer)")
+#execute("create table dw_user_live (name text, email text, state text, phone integer)")
+
+def fPostToServer(sMe,sSubject,email_html,dUserInfo,sSMS):
 	"""
-	The email server is listening on port number 6000.
-	Post the email to the server.
-	Makes the process of sending email non-blocking.
+	sends email and sms to the post office server
 	"""
 	address = ('localhost',6000)
-	connTCP = Client(address, authkey='drydayiswhen')
-	connTCP.send(pickle.dumps(sMsg))  # pickle ensures that the actual datatype of sMsg doesn't change when it is received on the server
+	connTCP = Client(address, authkey='')
+	dEMAIL = {'id':'email', 'from':sMe, 'subject': sSubject, 'body': email_html ,'to':dUserInfo['email'],'state':dUserInfo['state']}
+	dSMS = {'id':'sms', 'sms':sSMS, 'phone':dUserInfo['phone'],'state':dUserInfo['state']}	
+	connTCP.send(pickle.dumps(dSMS))
+	connTCP.close()
+	connTCP = Client(address, authkey='')
+	connTCP.send(pickle.dumps(dEMAIL))
 	connTCP.close()
 
-'''
-import smtplib
-# SES | Mail connection
-#s = smtplib.SMTP("email-smtp.us-east-1.amazonaws.com")
-s = smtplib.SMTP("ses-smtp-prod-335357831.us-east-1.elb.amazonaws.com")
-s.starttls()
-from ses_cred import ses_cred as ses
-user_name = ses.cred['user']
-user_pswd = ses.cred['pswd']
-s.login(user_name,user_pswd)
-'''
 
-def fValidateUser(dUserInfo,sWTable):
+def fValidateUser(dUserInfo):
 	"""
-	Validate if the Email user entered already exists in db.
-	
-	If True user re-directed to the signup with error stating
-	user email you entered already exists. Try Again.
+	Validate if the Email and State user entered already exists in db.
+	If True, user asked to Try again with different state
 	If False, user allowed to sign up
 	"""
 	gDBConn = con.cursor()
-	gDBConn.execute("select email from "+sWTable+" where email = '"+dUserInfo['email']+"'")
+	gDBConn.execute("select state from "+sWUserLive+" where state = '"+dUserInfo['state']+"' and email = '"+dUserInfo['email']+"' ")
 	vUserExist = gDBConn.fetchall()
 	if len(vUserExist)>0:
 		return 0
 	else:
 		return 1
 
-def fSuccessMail(dUserInfo):
-	"""
-	function argument = state of the successful user
-	Returns all dry days in that state
-	create table dw_dryday (state varchar(50), drydate date, dryday varchar(30), primary key (state, drydate));
-	"""
+def fSuccessMail(dUserInfo,sUserNxtDryDayDtl):
 	gDBConn = con.cursor()
-	
-	gDBConn.execute("select state, drydate from "+sWDryDay+" where state = %s",(dUserInfo['state']))
-	tState = gDBConn.fetchall()		
-	return template ('mail/mail.tpl', dUserInfo=dUserInfo, tstate=tState)
+	gDBConn.execute("select reason, drydate from "+sWDryDay+" where state = '"+dUserInfo['state']+"' and strftime('%Y',drydate)=strftime('%Y','now') order by drydate")
+	sUserAllDryDay=tuple(gDBConn.fetchall())
+	lStateBanner=('Maharashtra','Delhi','Tamilnadu','West Bengal')
+	dStateBanner={'Maharashtra':'http://whenisdryday.in/bs/img/mail/maha1.jpg','Delhi':'http://whenisdryday.in/bs/img/mail/del1.jpg'\
+	,'West Bengal':'http://whenisdryday.in/bs/img/mail/wb1.jpg','Tamilnadu':'http://whenisdryday.in/bs/img/mail/tn1.jpg'}
+	return template ('./src/mail/signup_success.tpl', dUserInfo=dUserInfo, sUserAllDryDay=sUserAllDryDay, sUserNxtDryDayDtl=sUserNxtDryDayDtl,dStateBanner=dStateBanner,lStateBanner=lStateBanner)
 
-me = 'tequila@whenisdryday.in'
-
-def fSendMail(me,dUserInfo):
+def fSendMail(dUserInfo,sUserNxtDryDay):
 	"""
 	Email Sending
 	fSuccessEmail called and fed into the MIME Text as msg
 	msg is a list. with values like sender, subject etc
 	Returns success if email sent
 	"""
-	email_html = MIMEText(fSuccessMail(dUserInfo),'html')
-	msg = MIMEMultipart('alternative')
-	msg['Subject'] = 'Subscription to whenisdryday.in successful'
-	msg['From'] = me
-	msg['To'] = dUserInfo['email']
-	#you = dUserInfo['email']
-	msg.attach(email_html)
-	# Commenting sending as it wouldn't work right now
-	#gMail.sendmail(me, you, msg.as_string())
-	print "message successully sent"
-	fPostMailToServer(msg) #Post message as MIMEText
+	sUserNxtDryDayDtl = {'id':'homepage', 'msg':'Next DryDay is on ', 'day':time.strftime('%A',sUserNxtDryDay), 'date':time.strftime('%d',sUserNxtDryDay), 'month':time.strftime('%b',sUserNxtDryDay) }
+#	email_html = MIMEText(fSuccessMail(dUserInfo,sUserNxtDryDayDtl),'html')
+	email_html = (fSuccessMail(dUserInfo,sUserNxtDryDayDtl))
+	sSubject = 'Successfully subscribed to whenisdryday.in'
+	sMe = 'tequila@whenisdryday.in'
+	sSMS = 'Cheers!!You will be notified by SMS before DryDays in '+dUserInfo['state']+'. '+sUserNxtDryDayDtl['msg']+sUserNxtDryDayDtl['day']+' '+sUserNxtDryDayDtl['date']+' '+sUserNxtDryDayDtl['month']+''
+	try :
+		fPostToServer(sMe,sSubject,email_html,dUserInfo,sSMS)
+		#print "message successully sent" AND DELETE THE MAIL ARCHIVE, KEEP ONLY FILE
+		fMail1 = './src/mail/'+str(gMailTS)+'_'+dUserInfo['email']+'_'+dUserInfo['state']+'.html'
+		f1=open(fMail1,'w')
+		print >> f1, email_html
+		f1.close()
+		print "email and sms successfully posted to post office server"
+		flog='./src/log/homepage_to_post_sucess.log'
+		sMsg=''+str(gMailTS)+' Name= '+dUserInfo['name']+' State= '+dUserInfo['state']+' Email= '+dUserInfo['email']+' and Phone= '+str(dUserInfo['phone'])+''
+		f=open(flog,'a')
+		print >> f, sMsg
+		f.close()
+	except :
+		allerror = sys.exc_info()[0]
+		print "error in sending to post office server"
+		fsockerr = './src/log/homepage_to_post_error.log'
+		sferr = ''+str(gMailTS)+' Name= '+dUserInfo['name']+' State= '+dUserInfo['state']+' Email= '+dUserInfo['email']+' and Phone= '+str(dUserInfo['phone'])+''
+		f2=open(fsockerr,'a')
+		print >>f2, sferr,allerror
+		f2.close
 	return 1
 
-def fNewUserData(lHtmlFields, sWUser):
+def fNewUserData(lHtmlFields):
 	"""
 	Parse user inputs and put save it in db. retrun user entered fields.
 	Extract user entered fields from lHtmlFields. Call validate function
-	before saving it to the db. Table schema for the user table is -
-	 
-	create table dw_user (first_name char(30), last_name char(30) ,email varchar(50) primary key, state char(30) , verified int);
-
-	create table dw_user_live (first_name char(30), last_name char(30) ,email varchar(50) primary key, state char(30) , verified int);
-	
+	before saving it to the db. 
 	"""
 	dUserInfo= {}
 	for sEntry in lHtmlFields:
 		dUserInfo[sEntry]= request.GET.get(sEntry).strip()
-	if (fValidateUser(dUserInfo,sWUserLive)==0):
-		dUserInfo['first_name']="User Exists"
+	if (fValidateUser(dUserInfo)==0):
+		dUserInfo['state']="State Exists"
 		return dUserInfo
 	gDBConn = con.cursor()
-	
-#	Insert into live table
-	gDBConn.execute("insert into "+sWUserLive+" (first_name,last_name,email,state,verified) values (%s,%s,%s,%s,%s)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['verified']))
 
-	if (fValidateUser(dUserInfo,sWUser)==1):
+#	Insert into live table
+	gDBConn.execute("insert into "+sWUserLive+" values (?,?,?,?)",(dUserInfo['name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['phone']))
+
+	if (fValidateUser(dUserInfo)==1):
 #	Insert into mother table
-		gDBConn.execute("insert into "+sWUser+" (first_name,last_name,email,state,verified) values (%s,%s,%s,%s,%s)",(dUserInfo['first_name'], dUserInfo['last_name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['verified']))
-		
+		gDBConn.execute("insert into "+sWUser+" values (?,?,?,?)",(dUserInfo['name'], dUserInfo['email'], dUserInfo['state'], dUserInfo['phone']))
+
 	con.commit()
+	#Next Dry day in user's state to put in email and sms
+	gDBConn.execute("SELECT b.drydate\
+		FROM ( SELECT min(strftime('%s',drydate)) as min_u FROM "+sWDryDay+" \
+			WHERE strftime('%s',drydate)>strftime('%s',date('now')) AND state='"+dUserInfo['state']+"') AS a \
+		INNER JOIN "+sWDryDay+" AS b \
+			ON a.min_u = strftime('%s',b.drydate)\
+		GROUP BY 1")
+	tUserDryDay=gDBConn.fetchall()
+	sUserNxtDryDay=str(''.join(tUserDryDay[0]))
+	sUserNxtDryDay=time.strptime(sUserNxtDryDay,'%Y-%m-%d')
 	gDBConn.close()
-	fSendMail(me,dUserInfo)
+	fSendMail(dUserInfo,sUserNxtDryDay)
 	return dUserInfo
 
 @route('/', method='GET')
 def new_user():
 	if request.GET.get('save','').strip():
-		lHtmlFields= ['first_name', 'last_name', 'email', 'state','verified']
-		dUserInfo = fNewUserData(lHtmlFields, sWUser)
-		if (dUserInfo['first_name'] == "User Exists"):
-			return template('user_exist.tpl')
+		lHtmlFields= ['name', 'email', 'phone', 'state']
+		dUserInfo = fNewUserData(lHtmlFields)
+		if (dUserInfo['state'] == "State Exists"):
+			return template('user_state_exist.tpl')
 		else:
-			return template('success.tpl')
+			return template('success.tpl',dUserInfo=dUserInfo)
 	else:
 		return template('index.tpl')
-
-@route('/confirm/:email', method='GET')
-def confirm_user(email):
-	gDBConn = con.cursor()
-	gDBConn.execute("UPDATE "+sWUserLive+" SET verified = ? WHERE email = %s",(1,email))
-	con.commit()
-	gDBConn.close()
-	return template('<b> emailid {{email}} successully verified </b>',email=email)
 
 @route('/unsubscribe/:email', method='GET')
 def unsubscribe_user(email):
 	if request.GET.get('save','').strip():	
 		gDBConn = con.cursor()
-		gDBConn.execute("DELETE FROM "+sWUserLive+" WHERE email = %s",(email,))
+		gDBConn.execute("DELETE FROM "+sWUserLive+" WHERE email = '"+email+"' ")
 		con.commit()
 		gDBConn.close()
 		return template('unsubscribe_success.tpl')
+	if request.GET.get('cancel','').strip():
+		return wetdays()
 	else:
-		return template ('unsubscribe.tpl',emailid=email)
+		return template('unsubscribe.tpl',emailid=email)
 
 @route('/update/:email', method='GET')
 def update_user(email):
@@ -184,17 +196,26 @@ def update_user(email):
 			lState=row
 		return template ('update.tpl',lState=lState,email=email)
 
-@route('/about.html')
+@route('/about')
 def about():
 	return template('about.html')
 
-@route('/wetdays.html')
-def about():
+@route('/wetdays')
+def wetdays():
 	return template('wetdays.html')
+
+@route('/alldrydays')
+def alldrydays():
+	return template('alldrydays.html')
 
 @route('/bs/:path#.+#',name='bs')
 def db(path):
 	return static_file(path,root='bs')
+
+#REMOVE THIS LINE TOO 
+@route('/src/mail/:path#.+#',name='mail')
+def db(path):
+	return static_file(path,root='mail')
 
 @route('/confirm/bs/:path#.+#',name='bs')
 def db(path):
@@ -207,6 +228,11 @@ def db(path):
 @route('/unsubscribe/bs/:path#.+#',name='bs')
 def db(path):
 	return static_file(path,root='bs')
+
+#Load testing on https://loader.io/
+@route('/loaderio-2f6667560533b77f3099c56159bdb824/')
+def loadtest():
+	return template('loadtest.tpl')
 
 debug(True)
 

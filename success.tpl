@@ -32,10 +32,10 @@
           <!--<a class="brand" href="#">whenisdryday</a>-->
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="http://stage.whenisdryday.in">Home</a></li>
-              <li class="active"><a href="./about.html">About Us</a></li>
-              <li><a href="./wetdays.html">Wet Days</a></li>
-              <li><a href="#contact">All Dry Days</a></li>
+              <li><a href="http://whenisdryday.in">Home</a></li>
+              <li class="active"><a href="./about">About Us</a></li>
+              <li><a href="./wetdays">Wet Days</a></li>
+              <li><a href="./alldrydays">All Dry Days</a></li>
               <li><a href="http://github.com/acedip/whenisdryday">+Code</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -45,7 +45,8 @@
 
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit text-center">
-    <a class="text-success"><h3>Cheers!! Now just check your email to confirm, and you are done.</h3></a> 
+    <a class="text-success"><h3>Cheers!! Now you will receive an email/SMS a day before the Dry Day(s) in {{dUserInfo['state']}}.</h3></a> 
+    <a class="text-primary"><h3>If you want to receive updates on any other state than just go back and put in another state and we'll keep you updated about Dry Day(s) in that state as well.</h3></a> 
     	<br>
       <h2>So what is Whenisdryday.in?</h2>
       <p>A simple email subscription service, away from the hassles of longin or account creation. <br>Just put in your EMail Address and State and we will send you an email a day before the dry day in your state.<br><strong>Why State?</strong>Well, in India every state has different number of dry days<br>For Instance Delhi has over 20 Dry Days in an year, Maharashtra has 9.</p>
@@ -74,5 +75,15 @@
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60498113-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   </body>
 </html>

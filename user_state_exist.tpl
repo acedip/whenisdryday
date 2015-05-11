@@ -32,7 +32,7 @@
           <!--<a class="brand" href="#">whenisdryday</a>-->
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="http://whenisdryday.in"><i class="icon-home"></i> Home</a></li>
+              <li class="active"><a href="http://whenisdryday.in">Home</a></li>
               <li><a href="./about">About Us</a></li>
               <li><a href="./wetdays">Wet Days</a></li>
               <li><a href="./alldrydays">All Dry Days</a></li>
@@ -57,6 +57,7 @@
         <div class="span4">
           <form class="text-center" action="/" method="GET">
             <h3 style="margin:0px 0px 0px 0px">When is Dry Day?</h3>
+             <a class="text-default" style="margin:0px 0px 0px 0px"><h4>Stock up for another state</h4></a>
             <input style="margin:0px 0px 2px 0px" type="text" id="name" class="input-small" name="name" placeholder="Nick Name" style="width:94px">   
             <br>
             <input style="margin:0px 0px 2px 0px" type="email" name="email" pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' required placeholder="Email Address">
@@ -93,7 +94,7 @@
             </select>
             <br>
             <button class="btn btn-danger btn-large" type="submit" name="save" value="1">Say Cheers!!</button> 
-            <a class="text-error"><h4 style="margin:4px 0px 0px 0px">We Do Not Spam</h4></a>    
+            <a class="text-error"><h4 style="margin:4px 0px 0px 0px">We Do Not Spam</h4></a>
           </form>
         </div>
               
@@ -115,7 +116,7 @@
     <script src="./bs/js/bootstrap-collapse.js"></script>
     <script src="./bs/js/bootstrap-carousel.js"></script>
     <script src="./bs/js/bootstrap-typeahead.js"></script>
-    <script>
+  <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

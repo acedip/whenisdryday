@@ -1,0 +1,10 @@
+useful commands
+cat /dev/null > ./src/log/main.log 
+cat /dev/null > ./src/log/main_to_post_error.log 
+cat /dev/null > ./src/log/main_to_post_sucess.log 
+cat /dev/null > ./src/log/n00b.log 
+cat /dev/null > ./src/log/postserver.log 
+cat /dev/null > ./src/log/postserver_error.log 
+cat /dev/null > ./src/log/homepage.log
+cat /dev/null > ./src/log/homepage_to_post_error.log
+cat /dev/null > ./src/log/homepage_to_post_sucess.log 

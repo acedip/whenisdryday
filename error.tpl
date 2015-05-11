@@ -32,10 +32,10 @@
           <!--<a class="brand" href="#">whenisdryday</a>-->
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="http://whenisdryday.in">Home</a></li>
-              <li><a href="./about">About Us</a></li>
-              <li class="active"><a href="./wetdays">Wet Days</a></li>
-              <li><a href="./alldrydays">All Dry Days</a></li>
+              <li><a href="http://stage.whenisdryday.in">Home</a></li>
+              <li class="active"><a href="./about.html">About Us</a></li>
+              <li><a href="./wetdays.html">Wet Days</a></li>
+              <li><a href="#contact">All Dry Days</a></li>
               <li><a href="http://github.com/acedip/whenisdryday">+Code</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -45,28 +45,10 @@
 
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit text-center">
-    
-<h2>Screw Dry Day. Celebrate the high spirited ... </h2>
-
-<h4> Double Donkey </h4>
-<iframe width="560" height="315" src="http://www.youtube.com/embed/9doE9L-Jvj4" frameborder="0" allowfullscreen></iframe> 
-
-<h3> Dry Day plight from Jaspal Bhatti.</h3>
-<iframe width="560" height="315" src="http://www.youtube.com/embed/lf2JCRizbWw" frameborder="0" allowfullscreen></iframe>
-
-<h3> Reasons to drink Black Dog</h3>
-<iframe width="560" height="315" src="http://www.youtube.com/embed/2E-Gd2nN4As" frameborder="0" allowfullscreen></iframe>
-
-<h3> Energy Drink for Women </h3>
-<iframe width="560" height="315" src="http://www.youtube.com/embed/ZyJXLn_JwI8" frameborder="0" allowfullscreen></iframe>
-
-<!-- Make this a fixed email CSS tag and use everywhere -->
-<h3 style="font-size: 15px ;
-    margin: 10px;
-    margin-left: 0%;
-text-align: center;" >Want to add something here??  <a href="mailto:beer@whenisdryday.in?Subject=Wet%20Day%20suggestions">eMail Us</a>  </h3>  
-
-</div> <!-- hero class -->
+    <a class="text-success"><h3>SOMETHING BROKE </h3></a> 
+    <a class="text-primary"><h3>SOMETHING BROKE</h3></a> 
+              
+      </div> <!-- hero class -->
     
     <!-- Le javascript
     ================================================== -->
@@ -84,7 +66,7 @@ text-align: center;" >Want to add something here??  <a href="mailto:beer@whenisd
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
-  <script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

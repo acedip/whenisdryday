@@ -1,0 +1,44 @@
+SMS successfully sent to sms india hub
+2015-05-10 09:46:00.067739 9986268685 Madhya Pradesh
+SMS successfully sent to sms india hub
+2015-05-10 09:48:38.149721 9176063623 Karnataka
+SMS successfully sent to sms india hub
+2015-05-10 10:13:05.171584 9176063623 Karnataka
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "./src/post_server.py", line 40, in SendMsgThread
+    print "error in posting sms to sms india hub\n"
+IOError: [Errno 5] Input/output error
+
+SMS successfully sent to sms india hub
+2015-05-11 10:57:47.894032 9986268685 Maharashtra
+email successfully sent to SES
+2015-05-11 10:57:48.228118 shekhawat.anirudh@gmail.com Maharashtra
+SMS successfully sent to sms india hub
+2015-05-11 11:05:52.721302 9176063623 Assam
+email successfully sent to SES
+2015-05-11 11:05:53.124212 krpiyushmobile@gmail.com Assam
+SMS successfully sent to sms india hub
+2015-05-11 11:12:47.977285 9176063623 Bihar
+email successfully sent to SES
+2015-05-11 11:12:48.293187 krpiyushmobile@gmail.com Bihar
+SMS successfully sent to sms india hub
+2015-05-11 11:17:19.067454 9986268685 Karnataka
+email successfully sent to SES
+2015-05-11 11:17:19.488936 shekhawat.anirudh@gmail.com Karnataka
+SMS successfully sent to sms india hub
+2015-05-11 11:17:26.414697 9986268685 Chhattisgarh
+email successfully sent to SES
+2015-05-11 11:17:26.667343 shekhawat.anirudh@gmail.com Chhattisgarh
+SMS successfully sent to sms india hub
+2015-05-11 12:03:24.185051 9986268685 Karnataka
+email successfully sent to SES
+2015-05-11 12:03:24.403258 shekhawat.anirudh@gmail.com Karnataka
+SMS successfully sent to sms india hub
+2015-05-11 12:25:19.660633 9986268685 Bihar
+email successfully sent to SES
+2015-05-11 12:25:19.887370 shekhawat.anirudh@gmail.com Bihar
